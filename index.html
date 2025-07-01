@@ -11,31 +11,35 @@
         Header Placeholder
     </header>
     <div class="tab-hero">
-        <h1>Find Brochures</h1>
-        <p>Search for a the brochure you're looking for, or browse by brand below.</p>
+        <div class="tab-hero-container">
+            <h1>Find Brochures</h1>
+            <p>Search for a the brochure you're looking for, or browse by brand below.</p>
+        </div>
     </div>
     <div class="brochures-tabs">
-        <a href="#" class="tab-item active" data-tab="equipment">
-            Equipment Brochures
-        </a>
-        <a href="#" class="tab-item" data-tab="product">
-            Product Brochures
-        </a>
-        <div class="search-container">
-            <form class="search-form" onsubmit="handleSearch(event)">
-                <input 
-                    type="text" 
-                    class="search-input" 
-                    placeholder="Search brochures..."
-                    id="search-input"
-                    autocomplete="off"
-                >
-                <button type="submit" class="search-button">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M21 21L16.514 16.506M19 10.5A8.5 8.5 0 1 1 10.5 2a8.5 8.5 0 0 1 8.5 8.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-            </form>
+        <div class="tabs-container">
+            <a href="#" class="tab-item active" data-tab="equipment">
+                Equipment Brochures
+            </a>
+            <a href="#" class="tab-item" data-tab="product">
+                Product Brochures
+            </a>
+            <div class="search-container">
+                <form class="search-form" onsubmit="handleSearch(event)">
+                    <input 
+                        type="text" 
+                        class="search-input" 
+                        placeholder="Search brochures..."
+                        id="search-input"
+                        autocomplete="off"
+                    >
+                    <button type="submit" class="search-button">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 21L16.514 16.506M19 10.5A8.5 8.5 0 1 1 10.5 2a8.5 8.5 0 0 1 8.5 8.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
         </div>
     </div>
 
