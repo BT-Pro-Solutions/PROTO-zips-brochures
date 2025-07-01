@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - Brochures</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles specific to search results */
+        .search-results-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .search-header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .search-query {
+            font-size: 1.5em;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .search-meta {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .search-results {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .search-result {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            transition: border-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .search-result:hover {
+            border-color: #ccc;
+        }
+
+        .result-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .result-title svg {
+            flex-shrink: 0;
+            color: #666;
+        }
+
+        .result-reason {
+            font-size: 13px;
+            color: #666;
+            background: #f9f9f9;
+            padding: 4px 8px;
+            border-radius: 12px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .result-brand {
+            font-size: 14px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 20px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .back-button:hover {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+
+        .no-results h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .search-results-container {
+                padding: 15px;
+            }
+            
+            .search-result {
+                padding: 15px;
+            }
+            
+            .result-title {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Header Placeholder
+    </header>
+    
+    <div class="search-results-container">
+        <a href="index.html" class="back-button">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 12H5M12 5l-7 7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Back to Brochures
+        </a>
+
+        <div class="search-header">
+            <h1 class="search-query">Search results for: <span id="search-query-text"></span></h1>
+            <div class="search-meta">
+                <span id="result-count"></span> results found
+            </div>
+        </div>
+
+        <div class="search-results" id="search-results">
+            <!-- Results will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        // Get search query from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('q') || '';
+
+        // Hard-coded search results for demonstration
+        const mockResults = [
+            {
+                title: "Auto Crane 5005EH Series Brochure",
+                brand: "Auto Crane",
+                reason: "title match",
+                url: "https://zips.com/docs/auto-crane-5005eh.pdf"
+            },
+            {
+                title: "Service Body Installation Guide",
+                brand: "Warner Service Bodies", 
+                reason: "matched text within PDF",
+                url: "https://zips.com/docs/warner-installation.pdf"
+            },
+            {
+                title: "Heavy Duty Winch Specifications",
+                brand: "Ramsey Winch",
+                reason: "similar product to search term",
+                url: "https://zips.com/docs/ramsey-hd-winch.pdf"
+            },
+            {
+                title: "LED Light Bar Product Catalog",
+                brand: "Whelen",
+                reason: "matched text within PDF",
+                url: "https://zips.com/docs/whelen-led-catalog.pdf"
+            },
+            {
+                title: "Towing Equipment Safety Manual",
+                brand: "In The Ditch",
+                reason: "title match",
+                url: "https://zips.com/docs/itd-safety-manual.pdf"
+            },
+            {
+                title: "Hydraulic System Maintenance Guide",
+                brand: "Buyers Products",
+                reason: "matched text within PDF",
+                url: "https://zips.com/docs/buyers-hydraulic.pdf"
+            },
+            {
+                title: "Emergency Vehicle Lighting Solutions",
+                brand: "Federal Signal",
+                reason: "similar product to search term",
+                url: "https://zips.com/docs/federal-lighting.pdf"
+            },
+            {
+                title: "Truck Body Specifications Sheet",
+                brand: "Century Equipment",
+                reason: "title match",
+                url: "https://zips.com/docs/century-specs.pdf"
+            }
+        ];
+
+        function displaySearchResults() {
+            // Update search query display
+            document.getElementById('search-query-text').textContent = `"${query}"`;
+            
+            // Filter results based on search query (simple simulation)
+            let filteredResults = mockResults;
+            
+            if (query.length > 0) {
+                // Simple filtering simulation - in reality this would be much more sophisticated
+                const queryLower = query.toLowerCase();
+                filteredResults = mockResults.filter(result => 
+                    result.title.toLowerCase().includes(queryLower) ||
+                    result.brand.toLowerCase().includes(queryLower) ||
+                    queryLower.includes('crane') ||
+                    queryLower.includes('winch') ||
+                    queryLower.includes('light') ||
+                    queryLower.includes('tow') ||
+                    queryLower.includes('hydraulic') ||
+                    queryLower.includes('truck') ||
+                    queryLower.includes('service')
+                );
+            }
+
+            // Update result count
+            document.getElementById('result-count').textContent = filteredResults.length;
+
+            // Generate results HTML
+            const resultsContainer = document.getElementById('search-results');
+            
+            if (filteredResults.length === 0) {
+                resultsContainer.innerHTML = `
+                    <div class="no-results">
+                        <h3>No results found</h3>
+                        <p>Try adjusting your search terms or browse our brochure categories.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            resultsContainer.innerHTML = filteredResults.map(result => `
+                <div class="search-result" onclick="window.open('${result.url}', '_blank')">
+                    <div class="result-reason">${result.reason}</div>
+                    <div class="result-title">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4a2 2 0 0 1 2-2h8a1 1 0 0 1 .707.293l5 5A1 1 0 0 1 20 8v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4zm13.586 4L14 4.414V8h3.586zM12 4H6v16h12V10h-5a1 1 0 0 1-1-1V4zm0 7.5a1 1 0 0 1 1 1v2.586l.293-.293a1 1 0 0 1 1.414 1.414l-2 2a1 1 0 0 1-1.414 0l-2-2a1 1 0 1 1 1.414-1.414l.293.293V12.5a1 1 0 0 1 1-1z" fill="currentColor"/>
+                        </svg>
+                        ${result.title}
+                    </div>
+                    <div class="result-brand">${result.brand}</div>
+                </div>
+            `).join('');
+        }
+
+        // Initialize search results when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            displaySearchResults();
+        });
+    </script>
+</body>
+</html> 

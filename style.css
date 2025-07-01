@@ -44,6 +44,7 @@ header {
     top: 100px;
     z-index: 100;
     border-top: 1px solid #e0e0e0;
+    align-items: center;
 }
 
 .tab-item {
@@ -69,6 +70,61 @@ header {
     color: #1a1a1a;
     border-bottom-color: #dc2626;
     background-color: #fff;
+}
+
+/* Search Container */
+.search-container {
+    margin-left: auto;
+    padding: 0 10px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 25px;
+    padding: 2px;
+    transition: all 0.3s ease;
+    max-width: 300px;
+}
+
+.search-form:focus-within {
+    border-color: #dc2626;
+    background: #fff;
+}
+
+.search-input {
+    border: none;
+    background: transparent;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    width: 200px;
+    font-family: inherit;
+}
+
+.search-input::placeholder {
+    color: #999;
+}
+
+.search-button {
+    border: none;
+    background: transparent;
+    padding: 8px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.search-button:hover {
+    background: #e0e0e0;
+    color: #333;
 }
 
 /* Tab content */
@@ -239,7 +295,6 @@ header {
     justify-content: center;
     width: 28px;
     height: 28px;
-    margin: 1px 0;
     font-size: 12px;
     font-weight: 600;
     color: #666;
@@ -308,6 +363,7 @@ div.alphabet-letter.active {
 @media (max-width: 768px) {
     .brochures-tabs {
         padding: 0 10px;
+        flex-wrap: wrap;
     }
     
     .tab-item {
@@ -315,6 +371,23 @@ div.alphabet-letter.active {
         font-size: 14px;
         flex: 1;
         text-align: center;
+    }
+    
+    .search-container {
+        order: 3;
+        width: 100%;
+        padding: 10px;
+        margin-left: 0;
+    }
+    
+    .search-form {
+        max-width: none;
+        width: 100%;
+    }
+    
+    .search-input {
+        width: 100%;
+        flex: 1;
     }
     
     .brochures-container {
@@ -354,6 +427,19 @@ div.alphabet-letter.active {
     
     .tab-item.active {
         border-bottom-color: #dc2626;
+    }
+    
+    .search-container {
+        padding: 8px 5px;
+    }
+    
+    .search-input {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+    
+    .search-button {
+        padding: 6px 8px;
     }
     
     .brochures-group {

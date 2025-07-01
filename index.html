@@ -17,6 +17,22 @@
         <a href="#" class="tab-item" data-tab="product">
             Product Brochures
         </a>
+        <div class="search-container">
+            <form class="search-form" onsubmit="handleSearch(event)">
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    placeholder="Search brochures..."
+                    id="search-input"
+                    autocomplete="off"
+                >
+                <button type="submit" class="search-button">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 21L16.514 16.506M19 10.5A8.5 8.5 0 1 1 10.5 2a8.5 8.5 0 0 1 8.5 8.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
     </div>
 
     <div class="content-wrapper">
@@ -442,6 +458,18 @@
         document.addEventListener('DOMContentLoaded', () => {
             new BrochureManager();
         });
+
+        // Handle search form submission
+        function handleSearch(event) {
+            event.preventDefault();
+            const searchInput = document.getElementById('search-input');
+            const query = searchInput.value.trim();
+            
+            if (query) {
+                // Redirect to search results page with query parameter
+                window.location.href = `search-results.html?q=${encodeURIComponent(query)}`;
+            }
+        }
     </script>
 </body>
 </html>
