@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        Header Placeholder
+    </header>
     <div class="brochures-tabs">
         <a href="#" class="tab-item active" data-tab="equipment">
             Equipment Brochures
@@ -42,6 +45,10 @@
                 this.activeTab = 'equipment';
                 this.brandPositions = {}; // Store brand positions for alphabet nav
                 this.availableLetters = new Set(); // Store available first letters
+                this.observer = null; // Intersection observer
+                this.userClickedLetter = false; // Track if user clicked a letter
+                this.scrollTimeout = null; // Debounce scroll events
+                this.isScrollingToLetter = false; // Track programmatic scrolling
                 this.init();
             }
 
@@ -52,6 +59,8 @@
                     this.createAlphabetNav();
                     this.renderContent();
                     this.updateAlphabetAvailability();
+                    this.setupScrollObserver();
+                    this.setupScrollDetection();
                 } catch (error) {
                     console.error('Failed to initialize brochure manager:', error);
                     this.showError('Failed to load brochure data');
@@ -98,8 +107,23 @@
                 });
                 document.getElementById(`${tabType}-content`).classList.add('active');
                 
+                // Clear active alphabet letter state when switching tabs
+                document.querySelectorAll('.alphabet-letter').forEach(el => {
+                    el.classList.remove('active');
+                });
+                
+                // Reset user interaction flags
+                this.userClickedLetter = false;
+                this.isScrollingToLetter = false;
+                
                 // Update alphabet navigation availability
                 this.updateAlphabetAvailability();
+                
+                // Re-observe brand sections for new tab
+                setTimeout(() => {
+                    this.observeBrandSections();
+                    this.updateActiveLetterFromObserver();
+                }, 100);
             }
 
             createAlphabetNav() {
@@ -152,16 +176,128 @@
                 });
             }
 
+            setupScrollDetection() {
+                // Listen for manual scroll events
+                window.addEventListener('scroll', () => {
+                    // Clear any existing timeout
+                    if (this.scrollTimeout) {
+                        clearTimeout(this.scrollTimeout);
+                    }
+                    
+                    // If this is programmatic scrolling from letter click, ignore
+                    if (this.isScrollingToLetter) {
+                        return;
+                    }
+                    
+                    // Mark that user has manually scrolled
+                    this.userClickedLetter = false;
+                    
+                    // Debounce: clear active letter after scroll stops
+                    this.scrollTimeout = setTimeout(() => {
+                        if (!this.userClickedLetter && !this.isScrollingToLetter) {
+                            // Let the intersection observer take over
+                            this.updateActiveLetterFromObserver();
+                        }
+                    }, 150);
+                }, { passive: true });
+            }
+
+            setupScrollObserver() {
+                // Create intersection observer for brand sections
+                const options = {
+                    root: null,
+                    rootMargin: '-80px 0px -50% 0px', // Account for sticky header
+                    threshold: 0.1
+                };
+
+                this.observer = new IntersectionObserver((entries) => {
+                    if (this.userClickedLetter || this.isScrollingToLetter) {
+                        return; // Don't override user's letter selection
+                    }
+                    
+                    // Find the most visible brand section
+                    let mostVisible = null;
+                    let maxVisibilityRatio = 0;
+                    
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting && entry.intersectionRatio > maxVisibilityRatio) {
+                            mostVisible = entry.target;
+                            maxVisibilityRatio = entry.intersectionRatio;
+                        }
+                    });
+                    
+                    if (mostVisible) {
+                        const letter = mostVisible.getAttribute('data-brand-letter');
+                        if (letter) {
+                            this.updateActiveAlphabetLetter(letter);
+                        }
+                    }
+                }, options);
+            }
+
+            updateActiveLetterFromObserver() {
+                // Force the observer to check current visibility
+                const activeContainer = document.querySelector(`#${this.activeTab}-content .brochures-container`);
+                if (!activeContainer) return;
+                
+                const brandSections = activeContainer.querySelectorAll('[data-brand-letter]');
+                let currentLetter = null;
+                
+                // Find which section is most visible
+                brandSections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    const tabHeight = 59; // Height of sticky tab bar
+                    
+                    // Check if section is in the upper part of viewport
+                    if (rect.top <= tabHeight + 100 && rect.bottom > tabHeight + 50) {
+                        currentLetter = section.getAttribute('data-brand-letter');
+                    }
+                });
+                
+                if (currentLetter) {
+                    this.updateActiveAlphabetLetter(currentLetter);
+                }
+            }
+
+            observeBrandSections() {
+                // Clear previous observations
+                if (this.observer) {
+                    this.observer.disconnect();
+                }
+                
+                // Observe brand sections in active tab
+                const activeContainer = document.querySelector(`#${this.activeTab}-content .brochures-container`);
+                if (!activeContainer) return;
+                
+                const brandSections = activeContainer.querySelectorAll('[data-brand-letter]');
+                brandSections.forEach(section => {
+                    this.observer.observe(section);
+                });
+            }
+
             scrollToLetter(targetLetter) {
+                // Mark that this is a user-initiated scroll
+                this.userClickedLetter = true;
+                this.isScrollingToLetter = true;
+                
+                // Get the active tab container to scope our search
+                const activeTabContainer = document.querySelector(`#${this.activeTab}-content .brochures-container`);
+                if (!activeTabContainer) return;
+                
                 // If the letter is available, scroll to it directly
                 if (this.availableLetters.has(targetLetter)) {
-                    const element = document.querySelector(`[data-brand-letter="${targetLetter}"]`);
+                    const element = activeTabContainer.querySelector(`[data-brand-letter="${targetLetter}"]`);
                     if (element) {
                         element.scrollIntoView({ 
                             behavior: 'smooth', 
                             block: 'start' 
                         });
                         this.updateActiveAlphabetLetter(targetLetter);
+                        
+                        // Reset scrolling flag after animation
+                        setTimeout(() => {
+                            this.isScrollingToLetter = false;
+                        }, 1000);
                         return;
                     }
                 }
@@ -183,13 +319,18 @@
                 }
                 
                 if (nearestLetter) {
-                    const element = document.querySelector(`[data-brand-letter="${nearestLetter}"]`);
+                    const element = activeTabContainer.querySelector(`[data-brand-letter="${nearestLetter}"]`);
                     if (element) {
                         element.scrollIntoView({ 
                             behavior: 'smooth', 
                             block: 'start' 
                         });
                         this.updateActiveAlphabetLetter(nearestLetter);
+                        
+                        // Reset scrolling flag after animation
+                        setTimeout(() => {
+                            this.isScrollingToLetter = false;
+                        }, 1000);
                     }
                 }
             }
@@ -210,6 +351,11 @@
 
                 this.renderEquipmentBrochures();
                 this.renderProductBrochures();
+                
+                // Set up observers after content is rendered
+                setTimeout(() => {
+                    this.observeBrandSections();
+                }, 100);
             }
 
             renderEquipmentBrochures() {
@@ -258,6 +404,7 @@
                 brochures.forEach(brochure => {
                     html += `
                         <a href="${this.escapeHtml(brochure.url)}" target="_blank" class="brochure-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4a2 2 0 0 1 2-2h8a1 1 0 0 1 .707.293l5 5A1 1 0 0 1 20 8v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4zm13.586 4L14 4.414V8h3.586zM12 4H6v16h12V10h-5a1 1 0 0 1-1-1V4zm0 7.5a1 1 0 0 1 1 1v2.586l.293-.293a1 1 0 0 1 1.414 1.414l-2 2a1 1 0 0 1-1.414 0l-2-2a1 1 0 1 1 1.414-1.414l.293.293V12.5a1 1 0 0 1 1-1z" fill="currentColor"/></svg>
                             ${this.escapeHtml(brochure.title)}
                         </a>
                     `;
