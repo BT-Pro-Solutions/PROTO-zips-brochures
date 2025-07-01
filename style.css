@@ -26,6 +26,16 @@ header {
     justify-content: flex-start;
 }
 
+.tab-hero {
+    background: linear-gradient(135deg, #555, #000);
+    color: #ccc;
+    padding: 60px 30px;
+
+    h1 {
+        color: #fff;
+    }
+}
+
 /* Container */
 .container {
     max-width: 1200px;
@@ -37,7 +47,7 @@ header {
 .brochures-tabs {
     background: #fff;
     border-bottom: 2px solid #e0e0e0;
-    padding: 0 20px;
+    padding: 0 30px;
     display: flex;
     gap: 0;
     position: sticky;
@@ -173,6 +183,7 @@ header {
 .content-wrapper {
     display: flex;
     min-height: calc(100vh - 120px);
+    padding-top: 30px;
 }
 
 /* Brochures container - single column */
@@ -262,7 +273,7 @@ header {
 /* Alphabet Navigation */
 .alphabet-nav {
     box-sizing: border-box;
-    position: fixed;
+    position: sticky;
     right: 20px;
     top: 170px;
     display: flex;
@@ -274,10 +285,12 @@ header {
     z-index: 50;
     max-height: calc(100vh - 180px);
     overflow-y: auto;
+    z-index: 100;
 }
 
 .alphabet-nav::-webkit-scrollbar {
     width: 2px;
+    display: none;
 }
 
 .alphabet-nav::-webkit-scrollbar-track {
@@ -285,7 +298,7 @@ header {
 }
 
 .alphabet-nav::-webkit-scrollbar-thumb {
-    background: #cccccc00;
+    background: transparent;
     border-radius: 2px;
 }
 
@@ -329,7 +342,7 @@ div.alphabet-letter.active {
     cursor: default;
 }
 
-@media (max-height: 600px) {
+@media (max-height: 700px) {
     .alphabet-letter.unavailable {
         display: none;
     }
@@ -361,6 +374,9 @@ div.alphabet-letter.active {
 }
 
 @media (max-width: 768px) {
+    .alphabet-nav {
+        top: 220px;
+    }
     .brochures-tabs {
         padding: 0 10px;
         flex-wrap: wrap;
@@ -392,7 +408,6 @@ div.alphabet-letter.active {
     
     .brochures-container {
         padding: 15px;
-        padding-right: 60px;
     }
     
     .brochures-group h2 {
@@ -459,35 +474,5 @@ div.alphabet-letter.active {
     .brochure-link {
         font-size: 14px;
         padding: 8px 12px;
-    }
-}
-
-/* Print styles */
-@media print {
-    .brochures-tabs,
-    .alphabet-nav {
-        display: none;
-    }
-    
-    .tab-panel {
-        display: block !important;
-    }
-    
-    .brochures-group {
-        break-inside: avoid;
-        border: 1px solid #000;
-        margin-bottom: 20px;
-    }
-    
-    .brochure-link {
-        color: #000;
-        text-decoration: underline;
-        background: none;
-        border: none;
-    }
-    
-    .brochures-group h2 {
-        position: static;
-        background: #f0f0f0;
     }
 }
