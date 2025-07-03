@@ -14,17 +14,7 @@
         <div class="hero-container">
             <h1>Brochures</h1>
             <p>Search for a the brochure you're looking for, or browse by brand below.</p>
-        </div>
-    </div>
-    <div class="brochures-tabs">
-        <div class="tabs-container">
-            <a href="#" class="tab-item active" data-tab="equipment">
-                Equipment Brochures
-            </a>
-            <a href="#" class="tab-item" data-tab="product">
-                Product Brochures
-            </a>
-            <div class="search-container">
+            <div class="hero-search">
                 <form class="search-form" onsubmit="handleSearch(event)">
                     <input 
                         type="text" 
@@ -44,17 +34,8 @@
     </div>
 
     <div class="content-wrapper">
-        <div class="tab-content">
-            <div id="equipment-content" class="tab-panel active">
-                <div class="brochures-container">
-                    <div class="loading">Loading equipment brochures...</div>
-                </div>
-            </div>
-            <div id="product-content" class="tab-panel">
-                <div class="brochures-container">
-                    <div class="loading">Loading product brochures...</div>
-                </div>
-            </div>
+        <div class="brochures-container">
+            <div class="loading">Loading brochures...</div>
         </div>
     </div>
 
@@ -62,14 +43,12 @@
         class BrochureManager {
             constructor() {
                 this.data = null;
-                this.activeTab = 'equipment';
                 this.init();
             }
 
             async init() {
                 try {
                     await this.loadData();
-                    this.setupTabs();
                     this.renderContent();
                 } catch (error) {
                     console.error('Failed to initialize brochure manager:', error);
@@ -90,40 +69,12 @@
                 }
             }
 
-            setupTabs() {
-                const tabItems = document.querySelectorAll('.tab-item');
-                tabItems.forEach(tab => {
-                    tab.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        const tabType = tab.getAttribute('data-tab');
-                        this.switchTab(tabType);
-                    });
-                });
-            }
-
-            switchTab(tabType) {
-                // Update active tab
-                this.activeTab = tabType;
-                
-                // Update tab appearance
-                document.querySelectorAll('.tab-item').forEach(tab => {
-                    tab.classList.remove('active');
-                });
-                document.querySelector(`[data-tab="${tabType}"]`).classList.add('active');
-                
-                // Update content visibility
-                document.querySelectorAll('.tab-panel').forEach(panel => {
-                    panel.classList.remove('active');
-                });
-                document.getElementById(`${tabType}-content`).classList.add('active');
-            }
-
             setupCollapsibleGroups() {
                 // Add event delegation for collapsible groups
                 document.addEventListener('click', (e) => {
                     // Check if clicked element is a brochure group header
-                    if (e.target.closest('.brochures-group h2')) {
-                        const header = e.target.closest('.brochures-group h2');
+                    if (e.target.closest('.brochures-group h3')) {
+                        const header = e.target.closest('.brochures-group h3');
                         const group = header.closest('.brochures-group');
                         
                         if (group) {
@@ -136,8 +87,7 @@
             renderContent() {
                 if (!this.data) return;
 
-                this.renderEquipmentBrochures();
-                this.renderProductBrochures();
+                this.renderBrochures();
                 
                 // Set up collapsible groups after content is rendered
                 setTimeout(() => {
@@ -145,29 +95,11 @@
                 }, 100);
             }
 
-            renderEquipmentBrochures() {
-                const container = document.querySelector('#equipment-content .brochures-container');
-                const brands = this.data.equipmentBrochures;
+            renderBrochures() {
+                const container = document.querySelector('.brochures-container');
+                const brands = this.data.brochures;
                 
-                let html = '';
-                
-                // Sort brands alphabetically
-                const sortedBrands = Object.keys(brands).sort();
-                
-                sortedBrands.forEach(brandName => {
-                    const brochures = brands[brandName];
-                    const firstLetter = brandName.charAt(0).toUpperCase();
-                    html += this.createBrandSection(brandName, brochures, firstLetter);
-                });
-                
-                container.innerHTML = html;
-            }
-
-            renderProductBrochures() {
-                const container = document.querySelector('#product-content .brochures-container');
-                const brands = this.data.productBrochures;
-                
-                let html = '';
+                let html = '<h2>Browse By Brand</h2>';
                 
                 // Sort brands alphabetically
                 const sortedBrands = Object.keys(brands).sort();
@@ -184,12 +116,12 @@
             createBrandSection(brandName, brochures, firstLetter) {
                 let html = `
                     <div class="brochures-group collapsed" data-brand-letter="${firstLetter}">
-                        <h2>
+                        <h3>
                             <div class="brand-info">
                                 ${this.escapeHtml(brandName)}
                                 <span class="brochure-count">(${brochures.length})</span>
                             </div>
-                        </h2>
+                        </h3>
                         <div class="brochures-list">
                 `;
                 
@@ -217,16 +149,14 @@
             }
 
             showError(message) {
-                const containers = document.querySelectorAll('.brochures-container');
-                containers.forEach(container => {
-                    container.innerHTML = `
-                        <div class="error-message">
-                            <h3>Error</h3>
-                            <p>${message}</p>
-                            <p>Please check the console for more details.</p>
-                        </div>
-                    `;
-                });
+                const container = document.querySelector('.brochures-container');
+                container.innerHTML = `
+                    <div class="error-message">
+                        <h3>Error</h3>
+                        <p>${message}</p>
+                        <p>Please check the console for more details.</p>
+                    </div>
+                `;
             }
         }
 

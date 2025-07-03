@@ -6,6 +6,17 @@
     <title>Search Results - Brochures</title>
     <link rel="stylesheet" href="style.css?v=2">
     <style>
+        /* Override hero styles to match home page */
+        .hero-container {
+            background: url(brochures-header-img.png) center no-repeat;
+            color: #ffffffdb;
+        }
+
+        .hero-container h1 {
+            font-size: 3rem;
+            color: #fff;
+        }
+
         /* Additional styles specific to search results */
         .search-results-container {
             max-width: 1200px;
@@ -154,6 +165,10 @@
         }
 
         @media (max-width: 768px) {
+            .hero-container h1 {
+                font-size: 2rem;
+            }
+
             .search-results-container {
                 padding: 15px;
             }
@@ -172,6 +187,10 @@
         }
 
         @media (max-width: 480px) {
+            .hero-container h1 {
+                font-size: 1.5rem;
+            }
+
             .search-nav-container {
                 padding: 0 10px;
             }
@@ -184,19 +203,9 @@
     </header>
     <div class="hero">
         <div class="hero-container">
-            <h1>Search Results</h1>
-            <p>Results for your brochure search query.</p>
-        </div>
-    </div>
-    <div class="search-nav">
-        <div class="search-nav-container">
-            <a href="index.html" class="back-button">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 12H5M12 5l-7 7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                Back to Brochures
-            </a>
-            <div class="search-container">
+            <h1>Brochures</h1>
+            <p>See results for your brochure search query.</p>
+            <div class="hero-search">
                 <form class="search-form" onsubmit="handleSearch(event)">
                     <input 
                         type="text" 
@@ -212,6 +221,17 @@
                     </button>
                 </form>
             </div>
+        </div>
+    </div>
+    <div class="search-nav">
+        <div class="search-nav-container">
+            <a href="index.html" class="back-button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 12H5M12 5l-7 7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back to Brochures
+            </a>
+            
         </div>
     </div>
     

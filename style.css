@@ -37,109 +37,62 @@ header {
 }
 
 .hero-container {
-    background:  url(brochures-header-img.png) right no-repeat;
-    background-size: contain;
+    background:  url(brochures-header-img.png) center no-repeat;
     max-width: 1200px;
     margin: 0 auto;
     padding: 60px 30px;
+    text-align: center;
+    color: #ffffffdb;
+    h1 {
+        font-size: 3rem;
+        color: #fff;
+    }
 }
 
-/* Container */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Tabs */
-.brochures-tabs {
-    background: #fff;
-    border-bottom: 2px solid #e0e0e0;
-    padding: 0;
+.hero-search {
+    margin-top: 30px;
     display: flex;
-    gap: 0;
-    position: sticky;
-    top: 100px;
-    z-index: 100;
-    border-top: 1px solid #e0e0e0;
-    align-items: center;
     justify-content: center;
-}
-
-.tabs-container {
-    max-width: 1200px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 30px;
-}
-
-.tab-item {
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60px;
-    text-decoration: none;
-    color: #666;
-    font-weight: 500;
-    border-bottom: 3px solid transparent;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.tab-item:hover {
-    color: #333;
-    background-color: #f9f9f9;
-}
-
-.tab-item.active {
-    color: #1a1a1a;
-    border-bottom-color: #dc2626;
-    background-color: #fff;
-}
-
-/* Search Container */
-.search-container {
-    margin-left: auto;
-    padding: 0 10px;
 }
 
 .search-form {
     display: flex;
     align-items: center;
-    background: #f9f9f9;
-    border: 1px solid #e0e0e0;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 25px;
     padding: 2px;
     transition: all 0.3s ease;
-    max-width: 300px;
+    max-width: 400px;
+    width: 100%;
+    backdrop-filter: blur(10px);
 }
 
 .search-form:focus-within {
-    border-color: #dc2626;
     background: #fff;
+    border-color: #dc2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
 }
 
 .search-input {
     border: none;
     background: transparent;
-    padding: 8px 12px;
-    font-size: 14px;
+    padding: 12px 16px;
+    font-size: 16px;
     color: #333;
     outline: none;
-    width: 200px;
+    width: 100%;
     font-family: inherit;
 }
 
 .search-input::placeholder {
-    color: #999;
+    color: #666;
 }
 
 .search-button {
     border: none;
     background: transparent;
-    padding: 8px 10px;
+    padding: 12px 14px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -150,23 +103,32 @@ header {
 }
 
 .search-button:hover {
-    background: #e0e0e0;
+    background: rgba(0, 0, 0, 0.1);
     color: #333;
 }
 
-/* Tab content */
-.tab-content {
-    padding: 0;
-    position: relative;
-    width: 100%;
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.tab-panel {
-    display: none;
+/* Main content area */
+.content-wrapper {
+    min-height: calc(100vh - 120px);
+    padding-top: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    h2 {
+        padding-bottom: 1em;
+    }
 }
 
-.tab-panel.active {
-    display: block;
+/* Brochures container - single column */
+.brochures-container {
+    padding: 20px;
 }
 
 /* Loading and error states */
@@ -196,19 +158,6 @@ header {
     margin-bottom: 10px;
 }
 
-/* Main content area */
-.content-wrapper {
-    min-height: calc(100vh - 120px);
-    padding-top: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Brochures container - single column */
-.brochures-container {
-    padding: 20px;
-}
-
 /* Brand groups - single column layout */
 .brochures-group {
     background: #fff;
@@ -217,45 +166,44 @@ header {
     margin-bottom: 1rem;
 }
 
-.brochures-group h2 {
+.brochures-group h3 {
     color: #1a1a1a;
-    font-size: 1.3em;
+    font-size: 1em;
     margin: 0;
     padding: 15px 25px;
     background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
-    border-bottom: 2px solid #e0e0e0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: sticky;
-    top: 159px; /* Height of tab bar */
+    top: 100px; /* Height of header only */
     z-index: 10;
     cursor: pointer;
     user-select: none;
 }
 
-.brochures-group h2 .brand-info {
+.brochures-group h3 .brand-info {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.brochures-group h2::after {
+.brochures-group h3::after {
     content: '▲';
     font-size: 0.8em;
     color: #666;
     transition: transform 0.3s ease;
 }
 
-.brochures-group.collapsed h2::after {
+.brochures-group.collapsed h3::after {
     content: '▼';
 }
 
-.brochures-group h2:hover {
+.brochures-group h3:hover {
     background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
 }
 
-.brochures-group h2:hover::after {
+.brochures-group h3:hover::after {
     color: #dc2626;
 }
 
@@ -322,14 +270,6 @@ header {
     .content-wrapper {
         padding: 30px 20px;
     }
-    
-    .tabs-container {
-        padding: 0 20px;
-    }
-    
-    .hero-container {
-        padding: 20px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -337,31 +277,16 @@ header {
         padding: 30px 10px;
     }
     
-    .tabs-container {
-        padding: 0 10px;
-        flex-wrap: wrap;
-    }
-    
     .hero-container {
-        padding: 15px;
+        padding: 20px;
         font-size: .8rem;
         h1 {
             font-size: 1.5rem;
         }
     }
     
-    .tab-item {
-        padding: 12px 15px;
-        font-size: 14px;
-        flex: 1;
-        text-align: center;
-    }
-    
-    .search-container {
-        order: 3;
-        width: 100%;
-        padding: 10px;
-        margin-left: 0;
+    .hero-search {
+        margin-top: 20px;
     }
     
     .search-form {
@@ -370,17 +295,16 @@ header {
     }
     
     .search-input {
-        width: 100%;
-        flex: 1;
+        font-size: 16px; /* Prevent zoom on iOS */
+        padding: 10px 14px;
+    }
+    
+    .search-button {
+        padding: 10px 12px;
     }
     
     .brochures-container {
         padding: 15px;
-    }
-    
-    .brochures-group h2 {
-        font-size: 1.2em;
-        padding: 12px 20px;
     }
     
     .brochures-list {
@@ -394,40 +318,21 @@ header {
         padding: 20px 5px;
     }
     
-    .tabs-container {
-        padding: 0 5px;
-    }
-    
     .hero-container {
-        padding: 10px;
-    }
-    
-    .tab-item {
-        padding: 10px 8px;
-        font-size: 13px;
-        text-align: center;
-    }
-    
-    .tab-item.active {
-        border-bottom-color: #dc2626;
-    }
-    
-    .search-container {
-        padding: 8px 5px;
+        padding: 20px;
     }
     
     .search-input {
-        font-size: 13px;
-        padding: 6px 10px;
+        font-size: 16px;
+        padding: 8px 12px;
     }
     
     .search-button {
-        padding: 6px 8px;
+        padding: 8px 10px;
     }
-    
-    .brochures-group h2 {
-        padding: 10px 15px;
-        font-size: 1.1em;
+
+    .brochures-group {
+        margin-bottom: -1px;
     }
     
     .brochures-list {

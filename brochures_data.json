@@ -1,44 +1,44 @@
 {
-  "equipmentBrochures": {
+  "brochures": {
     "Auto Crane": [
       {
-        "title": "Auto Crane Full Product Line ©2015",
+        "title": "Auto Crane Full Product Line \u00a92015",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/auto-crane/auto-crane-servicecranes-salessheet-2015-zips-brandingda936e5459ba668cbcc4ff0000ad64cd.pdf?sfvrsn=3f280815_4"
       },
       {
-        "title": "Auto Crane 3203EH Series with NexStar™ ©2013",
+        "title": "Auto Crane 3203EH Series with NexStar\u2122 \u00a92013",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/auto-crane/auto-crane-3203eh-techsheet-2013-zips-branding3a936e5459ba668cbcc4ff0000ad64cd.pdf?sfvrsn=82290815_4"
       },
       {
-        "title": "Auto Crane 4004EH Series with NexStar™ ©2013",
+        "title": "Auto Crane 4004EH Series with NexStar\u2122 \u00a92013",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/auto-crane/auto-crane-4004eh-techsheet-2013-zips-brandingce926e5459ba668cbcc4ff0000ad64cd.pdf?sfvrsn=83290815_4"
       },
       {
-        "title": "Auto Crane HC-6 with NexStar™ ©2015",
+        "title": "Auto Crane HC-6 with NexStar\u2122 \u00a92015",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/auto-crane/auto-crane-hc-6-2015-zips-branding6b936e5459ba668cbcc4ff0000ad64cd.pdf?sfvrsn=85290815_4"
       },
       {
-        "title": "Auto Crane HC-7 with NexStar™ ©2015",
+        "title": "Auto Crane HC-7 with NexStar\u2122 \u00a92015",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/auto-crane/auto-crane-hc-7-2015-zips-branding38936e5459ba668cbcc4ff0000ad64cd.pdf?sfvrsn=53280815_4"
       },
       {
-        "title": "Auto Crane HC-8 with NexStar™ ©2015",
+        "title": "Auto Crane HC-8 with NexStar\u2122 \u00a92015",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/auto-crane/auto-crane-hc-8-2015-zips-branding00936e5459ba668cbcc4ff0000ad64cd.pdf?sfvrsn=37280815_4"
       },
       {
-        "title": "Auto Crane HC-8x with NexStar™ Comparison Flyer ©2017",
+        "title": "Auto Crane HC-8x with NexStar\u2122 Comparison Flyer \u00a92017",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/auto-crane/auto-crane-hc-8x-2017-zips-branding7b936e5459ba668cbcc4ff0000ad64cd.pdf?sfvrsn=52280815_4"
       },
       {
-        "title": "Auto Crane HC-9 with NexStar™ ©2017",
+        "title": "Auto Crane HC-9 with NexStar\u2122 \u00a92017",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/auto-crane/auto-crane-hc-9-2015-zips-branding59936e5459ba668cbcc4ff0000ad64cd.pdf?sfvrsn=30280815_4"
       },
       {
-        "title": "Auto Crane HC-10 with NexStar™ ©2015",
+        "title": "Auto Crane HC-10 with NexStar\u2122 \u00a92015",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/auto-crane/auto-crane-hc-10-2015-zips-branding96936e5459ba668cbcc4ff0000ad64cd.pdf?sfvrsn=65280815_4"
       },
       {
-        "title": "Auto Crane HC-14 with NexStar™ ©2015",
+        "title": "Auto Crane HC-14 with NexStar\u2122 \u00a92015",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/auto-crane/auto-crane-hc-14-2015-zips-brandinga7936e5459ba668cbcc4ff0000ad64cd.pdf?sfvrsn=62280815_4"
       },
       {
@@ -46,21 +46,21 @@
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/auto-crane/autocrane-body-and-chassis-compatibility-sheet1.pdf?sfvrsn=d1080912_2"
       },
       {
-        "title": "Auto Crane Titan Service Body ©2015",
+        "title": "Auto Crane Titan Service Body \u00a92015",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/auto-crane/auto-crane-titan-service-body-2015-zips-brandingdb936e5459ba668cbcc4ff0000ad64cd.pdf?sfvrsn=94290815_4"
       }
     ],
     "Chevron Equipment": [
       {
-        "title": "Chevron 4 Car Carriers ©2016",
+        "title": "Chevron 4 Car Carriers \u00a92016",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/chevron-equipment/chevron-4-car-carrier-2016-zips-brand.pdf?sfvrsn=bed10a15_4"
       },
       {
-        "title": "Chevron 10 Series Gen 2 Carrier ©2016",
+        "title": "Chevron 10 Series Gen 2 Carrier \u00a92016",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/chevron-equipment/chevron-10-series-gen-ii-carrier-2016-zips-brands.pdf?sfvrsn=48d00a15_4"
       },
       {
-        "title": "Chevron 12 Series LCG Carrier ©2016",
+        "title": "Chevron 12 Series LCG Carrier \u00a92016",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/chevron-equipment/chevron-12-series-lcg-carrier-2016-zips-brands.pdf?sfvrsn=e0d00a15_4"
       },
       {
@@ -68,15 +68,15 @@
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/chevron-equipment/chevron-40-series-carrier-zips-brand.pdf?sfvrsn=37d00a15_4"
       },
       {
-        "title": "Chevron Loadrite Series Gen 2 Carriers ©2014",
+        "title": "Chevron Loadrite Series Gen 2 Carriers \u00a92014",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/chevron-equipment/chevron-loadrite-ii-carrier-zips-brand.pdf?sfvrsn=e2d10a15_4"
       },
       {
-        "title": "Chevron 408T &amp; 408TA Series Wrecker ©2018",
+        "title": "Chevron 408T &amp; 408TA Series Wrecker \u00a92018",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/chevron-equipment/chevron-408t-408ta-wrecker-2018-zips-brand.pdf?sfvrsn=bfd10a15_4"
       },
       {
-        "title": "Chevron 512TA Series Wrecker ©2017",
+        "title": "Chevron 512TA Series Wrecker \u00a92017",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/chevron-equipment/chevron-512-integrated-wrecker-2017-zips-brand.pdf?sfvrsn=34d00a15_4"
       }
     ],
@@ -88,24 +88,68 @@
     ],
     "Miller": [
       {
-        "title": "Miller 20 Series LCG Carriers ©2016",
+        "title": "Miller 20 Series LCG Carriers \u00a92016",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/miller/miller-20-series-lcg-carrier-2016-zips-brand.pdf?sfvrsn=d40a15_4"
       },
       {
-        "title": "Miller 30 &amp; 40 Series LCG Carriers ©2016",
+        "title": "Miller 30 &amp; 40 Series LCG Carriers \u00a92016",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/miller/miller-30-40-series-lcg-carrier-zips-brand.pdf?sfvrsn=68d40a15_4"
       },
       {
-        "title": "Miller 16 Series Multi-Deck LCG Carrier ©2014",
+        "title": "Miller 16 Series Multi-Deck LCG Carrier \u00a92014",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/miller/miller-16-series-multi-deck-lcg-carrier-2014-zips-brand.pdf?sfvrsn=30d70a15_4"
       },
       {
-        "title": "Miller Folding Ramp Flatbed Series Carrier ©2013",
+        "title": "Miller Folding Ramp Flatbed Series Carrier \u00a92013",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/miller/miller-folding-ramp-flatbed-series-carrier-2013-zips-brand.pdf?sfvrsn=3ed70a15_4"
       },
       {
-        "title": "Miller Titan C Series Carrier ©2017",
+        "title": "Miller Titan C Series Carrier \u00a92017",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/miller/miller-titan-c-series-carrier-2017-zips-brand.pdf?sfvrsn=d3d40a15_4"
+      },
+      {
+        "title": "Miller Seal Kit List February 2015",
+        "url": "https://zips.com/docs/default-source/parts-brochures/miller/miller-seal-kit-list-february-2015.pdf?sfvrsn=fc74a513_0"
+      },
+      {
+        "title": "Miller Eaton True Sine Wave Inverter",
+        "url": "https://zips.com/docs/default-source/parts-brochures/miller/ture_sine_wave_inverter.pdf?sfvrsn=4c8e8813_4"
+      },
+      {
+        "title": "New Miller 5 Inch Heavy Duty Towing Forks",
+        "url": "https://zips.com/docs/default-source/parts-brochures/miller/new-miller-5-inch-heavy-duty-towing-forks.pdf?sfvrsn=5d41fa12_2"
+      },
+      {
+        "title": "124004094 Towsling Conventional",
+        "url": "https://zips.com/docs/default-source/parts-brochures/miller/124004094-towsling-conventional-combined.pdf?sfvrsn=e6ef8d12_2"
+      },
+      {
+        "title": "T300 - DM-R160-0323AR2 Pairing Instructions",
+        "url": "https://zips.com/docs/default-source/parts-brochures/miller/t300---dm-r160-0323ar2-pairing-instructions.pdf?sfvrsn=249aeb15_0"
+      },
+      {
+        "title": "Century 0802027 Drawing",
+        "url": "https://zips.com/docs/default-source/parts-brochures/miller/century-0802027-drawing.pdf?sfvrsn=ee515c14_0"
+      },
+      {
+        "title": "Miller Industries 81287 Brochure",
+        "url": "https://zips.com/docs/default-source/parts-brochures/miller/miller-industries-81287-brochure.png?sfvrsn=50286e17_2"
+      },
+      {
+        "title": "Miller Industries 15-81286 Brochure",
+        "url": "https://zips.com/docs/default-source/parts-brochures/miller/miller-industries-81286-brochure.png?sfvrsn=26296e17_2"
+      },
+      {
+        "title": "Miller 124004140 Wiring Diagram",
+        "url": "https://zips.com/docs/default-source/parts-brochures/miller/miller-124004140-wiring-diagram.pdf?sfvrsn=29ba7d17_0"
+      },
+      {
+        "title": "Miller 124004140 Wiring Diagram",
+        "url": "https://zips.com/docs/default-source/parts-brochures/miller/miller-124004140-wiring-diagram38011b5659ba668cbcc4ff0000ad64cd.pdf?sfvrsn=fba7d17_0"
+      },
+      {
+        "title": "Miller 124004140 Wiring Diagram Details",
+        "url": "https://zips.com/docs/default-source/parts-brochures/miller/miller-124004140-wiring-diagram-details.pdf?sfvrsn=6eb47d17_0"
       }
     ],
     "Sidepullers": [
@@ -226,7 +270,7 @@
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/xl-specialized/xl-lightwieght-13-zips-branding.pdf?sfvrsn=fde31515_6"
       },
       {
-        "title": "XL Specialized Low-Profile HDG 15” Deck Height",
+        "title": "XL Specialized Low-Profile HDG 15\u201d Deck Height",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/xl-specialized/xl-low-profile-hdg-15--deck-height-zips-branding.pdf?sfvrsn=2ce71515_8"
       },
       {
@@ -288,31 +332,31 @@
     ],
     "Century Equipment": [
       {
-        "title": "Century 4-car Carrier ©2016",
+        "title": "Century 4-car Carrier \u00a92016",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/century-equipment/century-4-car-carrier-2016-zips-brand.pdf?sfvrsn=6f80a15_4"
       },
       {
-        "title": "Century 10 Series Gen 2 Carrier ©2016",
+        "title": "Century 10 Series Gen 2 Carrier \u00a92016",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/century-equipment/century-10-series-gen-ii-carrier-2016-zips-brand.pdf?sfvrsn=50f90a15_4"
       },
       {
-        "title": "Century 12 Series LCG Carrier ©2016",
+        "title": "Century 12 Series LCG Carrier \u00a92016",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/century-equipment/century-12-series-lcg-carrier-2016-zips-brand.pdf?sfvrsn=60f90a15_4"
       },
       {
-        "title": "Century 16 Series LCG Carrier ©2016",
+        "title": "Century 16 Series LCG Carrier \u00a92016",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/century-equipment/century-16-series-lcg-carrier-2016-zips-brand.pdf?sfvrsn=bdff0a15_4"
       },
       {
-        "title": "Century 20 &amp; 30 Series Carrier ©2016",
+        "title": "Century 20 &amp; 30 Series Carrier \u00a92016",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/century-equipment/century-20-30-series-carrier-2016-zips-brand.pdf?sfvrsn=6cff0a15_4"
       },
       {
-        "title": "Century The Right Approach Series Carriers ©2006",
+        "title": "Century The Right Approach Series Carriers \u00a92006",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/century-equipment/century-the-right-approach-carrier-2006-zips-brand.pdf?sfvrsn=bbf60a15_4"
       },
       {
-        "title": "Century Express Series Wrecker ©2016",
+        "title": "Century Express Series Wrecker \u00a92016",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/century-equipment/century-express-series-wrecker-2016-zips-brand.pdf?sfvrsn=96f60a15_4"
       },
       {
@@ -320,35 +364,35 @@
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/century-equipment/century-express-series-g-ii-wrecker-2016-zips-brand.pdf?sfvrsn=a3f70a15_2"
       },
       {
-        "title": "Century 411, 412, 602, &amp; 612 Series Wrecker ©2013",
+        "title": "Century 411, 412, 602, &amp; 612 Series Wrecker \u00a92013",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/century-equipment/century-411-412-602-612-wrecker-2013-zips-brand.pdf?sfvrsn=c4de0a15_4"
       },
       {
-        "title": "Century 2465 Series Wrecker ©2014",
+        "title": "Century 2465 Series Wrecker \u00a92014",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/century-equipment/century-2465-series-wrecker-2014-zips-brand.pdf?sfvrsn=a2de0a15_4"
       },
       {
-        "title": "Century 3212 Gen 2 Series Wrecker ©2016",
+        "title": "Century 3212 Gen 2 Series Wrecker \u00a92016",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/century-equipment/century-3212-g2-series-heavy-duty-2016-zips-brand.pdf?sfvrsn=a3de0a15_4"
       },
       {
-        "title": "Century Heavy Duty Integrated 4024, 5130, 5230, 7035, &amp; 9055 Series Wrecker ©2016",
+        "title": "Century Heavy Duty Integrated 4024, 5130, 5230, 7035, &amp; 9055 Series Wrecker \u00a92016",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/century-equipment/century-4024-5130-5230-7035-9055-series-heavy-duty-2016-zips-brand.pdf?sfvrsn=c0de0a15_4"
       },
       {
-        "title": "Century 1135 &amp; 1140 Series Rotator ©2021",
+        "title": "Century 1135 &amp; 1140 Series Rotator \u00a92021",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/century-equipment/century-1135-1140-series-rotator-2021-zips-brand.pdf?sfvrsn=6ed90a15_4"
       },
       {
-        "title": "Century 1150 Series Rotator ©2021",
+        "title": "Century 1150 Series Rotator \u00a92021",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/century-equipment/century-1150-series-rotator-2021-zips-brand.pdf?sfvrsn=8bde0a15_4"
       },
       {
-        "title": "Century 1075s Series Rotator  ©2021",
+        "title": "Century 1075s Series Rotator  \u00a92021",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/century-equipment/century-1075s-series-rotator-2021-zips-brand.pdf?sfvrsn=88de0a15_4"
       },
       {
-        "title": "Century SP 850-XP Series Wrecker ©2007",
+        "title": "Century SP 850-XP Series Wrecker \u00a92007",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/century-equipment/century-sp-850-xp-series-heavy-duty-2007-zips-brand.pdf?sfvrsn=d4de0a15_4"
       },
       {
@@ -358,89 +402,89 @@
     ],
     "Holmes Equipment": [
       {
-        "title": "Holmes 220 Snatcher Series Wrecker ©2014",
+        "title": "Holmes 220 Snatcher Series Wrecker \u00a92014",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/holmes-equipment/holmes-220-snatcher-2014-zips-brand.pdf?sfvrsn=75d70a15_4"
       },
       {
-        "title": "Holmes 440 Gen 2 Series Wrecker ©2015",
+        "title": "Holmes 440 Gen 2 Series Wrecker \u00a92015",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/holmes-equipment/holmes-440-gen-ii-2015-zips-brand.pdf?sfvrsn=dcd70a15_4"
       },
       {
-        "title": "Holmes DTU ©2019",
+        "title": "Holmes DTU \u00a92019",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/holmes-equipment/holmes-dtu-2019-zips-brand.pdf?sfvrsn=74d70a15_6"
       }
     ],
     "Trailmax": [
       {
-        "title": "Landoll 130C / 150C Fixed Gooseneck Beavertail Trailers ©2019",
+        "title": "Landoll 130C / 150C Fixed Gooseneck Beavertail Trailers \u00a92019",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/trailmax/130c-150c-fixed-gooseneck-beavertail-landoll-trailers-0619.pdf?sfvrsn=d70d0a15_6"
       },
       {
-        "title": "Landoll 302D / 305D / 314D Bottom Dump Trailers ©2019",
+        "title": "Landoll 302D / 305D / 314D Bottom Dump Trailers \u00a92019",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/trailmax/302d-305d-314d-bottom-dump-landoll-trailers-0619.pdf?sfvrsn=d60d0a15_6"
       },
       {
-        "title": "Landoll 317E / 318E Traveling Axle ©2020",
+        "title": "Landoll 317E / 318E Traveling Axle \u00a92020",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/trailmax/317e-318e-traveling-axle-landoll-trailers-0620.pdf?sfvrsn=690c0a15_6"
       },
       {
-        "title": "Landoll 326 / 327 / 329 Detachable Gooseneck Trailers ©2020",
+        "title": "Landoll 326 / 327 / 329 Detachable Gooseneck Trailers \u00a92020",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/trailmax/326c-327c-329c-detachale-gooseneck-landoll-trailers-0620.pdf?sfvrsn=820d0a15_6"
       },
       {
-        "title": "Landoll 330D Container Trailer ©2021",
+        "title": "Landoll 330D Container Trailer \u00a92021",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/trailmax/330d-container-trailer-landoll-trailers-0121.pdf?sfvrsn=990d0a15_6"
       },
       {
-        "title": "Landoll 343 Container Trailers ©2020",
+        "title": "Landoll 343 Container Trailers \u00a92020",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/trailmax/343a-container-trailer-landoll-trailers-0620.pdf?sfvrsn=830d0a15_6"
       },
       {
-        "title": "Landoll 345F Pintle Hitch Trailers ©2020",
+        "title": "Landoll 345F Pintle Hitch Trailers \u00a92020",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/trailmax/345f-pintle-hitch-landoll-trailers-0620.pdf?sfvrsn=750c0a15_6"
       },
       {
-        "title": "Landoll 440B / 455B NGL Traveling Axle Trailers ©2020",
+        "title": "Landoll 440B / 455B NGL Traveling Axle Trailers \u00a92020",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/trailmax/440b-455b-ngl-traveling-axle-landoll-trailers-0720.pdf?sfvrsn=d20d0a15_6"
       },
       {
-        "title": "Landoll 825 Ag Detachable Gooseneck Trailers ©2019",
+        "title": "Landoll 825 Ag Detachable Gooseneck Trailers \u00a92019",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/trailmax/825-ag-detachable-gooseneck-landoll-trailers-0419.pdf?sfvrsn=e50d0a15_6"
       },
       {
-        "title": "Landoll 835 / 835-HD / 845-HD Ag Detachable Gooseneck Trailers ©2020",
+        "title": "Landoll 835 / 835-HD / 845-HD Ag Detachable Gooseneck Trailers \u00a92020",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/trailmax/835e-835e-hd-845e-hd-ag-detachable-gooseneck-landoll-trailers-0920.pdf?sfvrsn=e10d0a15_6"
       },
       {
-        "title": "Landoll 835E / 855E Detach Gooseneck Trailers ©2020",
+        "title": "Landoll 835E / 855E Detach Gooseneck Trailers \u00a92020",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/trailmax/835e-855e-detach-gooseneck-landoll-trailers-0920.pdf?sfvrsn=da0d0a15_6"
       },
       {
-        "title": "Landoll 860 Detach Trailers ©2020",
+        "title": "Landoll 860 Detach Trailers \u00a92020",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/trailmax/860-detach-landoll-trailers-0920.pdf?sfvrsn=710c0a15_6"
       },
       {
-        "title": "Landoll 930 / 950 NGL Traveling Tail Trailers ©2020",
+        "title": "Landoll 930 / 950 NGL Traveling Tail Trailers \u00a92020",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/trailmax/930e-950e-ngl-traveling-tail-landoll-trailers-0720.pdf?sfvrsn=7e0c0a15_8"
       },
       {
-        "title": "Landoll L2024A Industrial Tag Trailers ©2020",
+        "title": "Landoll L2024A Industrial Tag Trailers \u00a92020",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/trailmax/l2024a-industiral-tag-landoll-trailers-1220.pdf?sfvrsn=260d0a15_6"
       },
       {
-        "title": "Landoll Loadoll II Rollback Carrier ©2019",
+        "title": "Landoll Loadoll II Rollback Carrier \u00a92019",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/trailmax/loadoll-ii-rollba-carrier-landoll-trailers-0419.pdf?sfvrsn=240d0a15_6"
       },
       {
-        "title": "Landoll LT1016A+4 / LT1020A Utility Tag Trailers ©2019",
+        "title": "Landoll LT1016A+4 / LT1020A Utility Tag Trailers \u00a92019",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/trailmax/lt1016a4-lt1020a-uitility-tag-landoll-trailers-0419.pdf?sfvrsn=ed0d0a15_6"
       },
       {
-        "title": "Landoll LT1420 / LT1422 Utility Tag Trailers ©2021",
+        "title": "Landoll LT1420 / LT1422 Utility Tag Trailers \u00a92021",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/trailmax/lt1420a-lt1422a-utility-tag-landoll-trailers-0121.pdf?sfvrsn=200d0a15_6"
       },
       {
-        "title": "Landoll 135-CSY Rollersized ©2019",
+        "title": "Landoll 135-CSY Rollersized \u00a92019",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/trailmax/trailer-135-csy-rollerized-oem-0519.pdf?sfvrsn=2a0d0a15_8"
       },
       {
@@ -516,11 +560,11 @@
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/smart-body-equipment/smart-body_cust.pdf?sfvrsn=55ff0313_2"
       },
       {
-        "title": "Smart Body SBMS ©2013",
+        "title": "Smart Body SBMS \u00a92013",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/smart-body-equipment/smartbody_sbms_032013.pdf?sfvrsn=ed030a13_4"
       },
       {
-        "title": "Smart Body SBMT ©2013",
+        "title": "Smart Body SBMT \u00a92013",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/smart-body-equipment/smartbody-sbmt-0820134d2d43321adc.pdf?sfvrsn=bd010a13_4"
       }
     ],
@@ -532,7 +576,7 @@
     ],
     "Vulcan Equipment": [
       {
-        "title": "Vulcan 10 Series Gen 2 Carrier ©2019",
+        "title": "Vulcan 10 Series Gen 2 Carrier \u00a92019",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/vulcan-equipment/vulcan-10-series-g2-carrier-2019-zips-brand.pdf?sfvrsn=f1cb0a15_4"
       },
       {
@@ -540,35 +584,35 @@
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/vulcan-equipment/vulcan-12-series-lcg-carrier-2017-zips-brand.pdf?sfvrsn=8bcb0a15_2"
       },
       {
-        "title": "Vulcan 12 &amp; 16 Series LCG Carriers ©2017",
+        "title": "Vulcan 12 &amp; 16 Series LCG Carriers \u00a92017",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/vulcan-equipment/vulcan-12-16-serries-lcg-carrier-2017-zips-brand.pdf?sfvrsn=3aca0a15_4"
       },
       {
-        "title": "Vulcan 20 &amp; 30 Series Carriers ©2016",
+        "title": "Vulcan 20 &amp; 30 Series Carriers \u00a92016",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/vulcan-equipment/vulcan-20-30-series-carrier-2016-zips-brand.pdf?sfvrsn=3bca0a15_4"
       },
       {
-        "title": "Vulcan 4 Car Carriers ©2016",
+        "title": "Vulcan 4 Car Carriers \u00a92016",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/vulcan-equipment/vulcan-4-car-carrier-2016-zips-brand.pdf?sfvrsn=74ca0a15_4"
       },
       {
-        "title": "Vulcan Extreme Angle ©2006",
+        "title": "Vulcan Extreme Angle \u00a92006",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/vulcan-equipment/vulcan-extreme-angle-carrier-2006-zips-brand.pdf?sfvrsn=f9cb0a15_4"
       },
       {
-        "title": "Vulcan 804 Series Wrecker ©2008",
+        "title": "Vulcan 804 Series Wrecker \u00a92008",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/vulcan-equipment/vulcan-804-series-wrecker-2008-zips-brand.pdf?sfvrsn=ffcb0a15_4"
       },
       {
-        "title": "Vulcan 807 R Series Wrecker ©2014",
+        "title": "Vulcan 807 R Series Wrecker \u00a92014",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/vulcan-equipment/vulcan-807-r-series-wrecker-2014-zips-brands.pdf?sfvrsn=97cb0a15_4"
       },
       {
-        "title": "Vulcan 810 Intruder Series Wrecker ©2016",
+        "title": "Vulcan 810 Intruder Series Wrecker \u00a92016",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/vulcan-equipment/vulcan-810-intruder-series-wrecker-2016-zips-brand.pdf?sfvrsn=70ca0a15_4"
       },
       {
-        "title": "Vulcan 812 Intruder II Series Wrecker ©2016",
+        "title": "Vulcan 812 Intruder II Series Wrecker \u00a92016",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/vulcan-equipment/vulcan-812-intruder-ii-series-wrecker-2016-zips-brand.pdf?sfvrsn=2ca0a15_4"
       },
       {
@@ -576,23 +620,23 @@
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/vulcan-equipment/vulcan-881-882-892-894-series-wrecker-2014-zips-brands.pdf?sfvrsn=ca0a15_2"
       },
       {
-        "title": "Vulcan SP 850-XP Series Wrecker ©2010",
+        "title": "Vulcan SP 850-XP Series Wrecker \u00a92010",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/vulcan-equipment/vulcan-sp-850-xp-series-heavy-duty-2010-zips-brand.pdf?sfvrsn=93cb0a15_4"
       },
       {
-        "title": "Vulcan V24 Series Wrecker ©2014",
+        "title": "Vulcan V24 Series Wrecker \u00a92014",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/vulcan-equipment/vulcan-v-24-series-wrecker-2014-zips-brand.pdf?sfvrsn=90cb0a15_4"
       },
       {
-        "title": "Vulcan V30 Gen 2 Series Wrecker ©2016",
+        "title": "Vulcan V30 Gen 2 Series Wrecker \u00a92016",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/vulcan-equipment/vulcan-v-30-gen-2-series-heavy-duty-2016-zips-brand.pdf?sfvrsn=c7cb0a15_4"
       },
       {
-        "title": "Vulcan NV-50 ©2007",
+        "title": "Vulcan NV-50 \u00a92007",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/vulcan-equipment/vulcan_heavy_duty_2007.pdf?sfvrsn=85ec3a13_8"
       },
       {
-        "title": "Vulcan V70 &amp; V100 Series Wrecker ©2017",
+        "title": "Vulcan V70 &amp; V100 Series Wrecker \u00a92017",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/vulcan-equipment/vulcan-v70-v100-series-heavy-duty-2017-zips-brand.pdf?sfvrsn=7cca0a15_4"
       }
     ],
@@ -625,9 +669,7 @@
         "title": "Zacklift RTU",
         "url": "https://zips.com/docs/default-source/new-equipment-brochures/zacklift-equipment/zacklift-rtu.pdf?sfvrsn=6d68bf13_2"
       }
-    ]
-  },
-  "productBrochures": {
+    ],
     "Arrow Safety Device": [
       {
         "title": "Arrow Catalog Part 1 (2009)",
@@ -2354,19 +2396,19 @@
     ],
     "Goodall": [
       {
-        "title": "Goodall Boost All® 13-223 Portable Jump Start Unit",
+        "title": "Goodall Boost All\u00ae 13-223 Portable Jump Start Unit",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/13_223d8a3b65259ba668cbcc4ff0000ad64cd.pdf?sfvrsn=7e19d013_2"
       },
       {
-        "title": "Goodall Boost All® 13-223 Portable Jump Start Unit",
+        "title": "Goodall Boost All\u00ae 13-223 Portable Jump Start Unit",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/13_223.pdf?sfvrsn=8ad2ea13_4"
       },
       {
-        "title": "Goodall Boost All® 13-224 Portable Jump Start Unit",
+        "title": "Goodall Boost All\u00ae 13-224 Portable Jump Start Unit",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/13_224.pdf?sfvrsn=7d2ea13_4"
       },
       {
-        "title": "Goodall Boost All® 13-224 Jump Start Unit with AC Generator",
+        "title": "Goodall Boost All\u00ae 13-224 Jump Start Unit with AC Generator",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/13_22498a4b65259ba668cbcc4ff0000ad64cd.pdf?sfvrsn=3e1ed013_6"
       },
       {
@@ -2374,11 +2416,11 @@
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/13_700.pdf?sfvrsn=92d2ea13_4"
       },
       {
-        "title": "Goodall Gas•All 53-535 Transfer &amp; Storage Unit with Air-Operated Pump",
+        "title": "Goodall Gas\u2022All 53-535 Transfer &amp; Storage Unit with Air-Operated Pump",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/53_535.pdf?sfvrsn=e6d2ea13_4"
       },
       {
-        "title": "Goodall Gas•All 53-539 Fuel Transfer &amp; Storage Unit with Air-Operated Pump",
+        "title": "Goodall Gas\u2022All 53-539 Fuel Transfer &amp; Storage Unit with Air-Operated Pump",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/53_539.pdf?sfvrsn=c3d2ea13_6"
       },
       {
@@ -2454,95 +2496,95 @@
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/13_085_10.pdf?sfvrsn=86d2ea13_4"
       },
       {
-        "title": "Goodall ProTec™ Gas•All 53-526 Fuel Transfer &amp; Storage Unit",
+        "title": "Goodall ProTec\u2122 Gas\u2022All 53-526 Fuel Transfer &amp; Storage Unit",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/53_526.pdf?sfvrsn=9ad2ea13_4"
       },
       {
-        "title": "Goodall Start•All® 11-605 Jump Start Unit with AC Generator &amp; Air Compressor",
+        "title": "Goodall Start\u2022All\u00ae 11-605 Jump Start Unit with AC Generator &amp; Air Compressor",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/11_605.pdf?sfvrsn=6eddea13_6"
       },
       {
-        "title": "Goodall Start•All® 11-606 Jump Start Unit with AC Generator",
+        "title": "Goodall Start\u2022All\u00ae 11-606 Jump Start Unit with AC Generator",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/11_606.pdf?sfvrsn=76ddea13_6"
       },
       {
-        "title": "Goodall Start•All® 11-608 Jump Start Unit with Air Compressor &amp; AC Generator",
+        "title": "Goodall Start\u2022All\u00ae 11-608 Jump Start Unit with Air Compressor &amp; AC Generator",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/11_608.pdf?sfvrsn=7eddea13_6"
       },
       {
-        "title": "Goodall Start•All® 11-610 Jump Start Unit",
+        "title": "Goodall Start\u2022All\u00ae 11-610 Jump Start Unit",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/11_610.pdf?sfvrsn=7addea13_4"
       },
       {
-        "title": "Goodall Start•All® 11-612 Jump Start Unit with Air Compressor",
+        "title": "Goodall Start\u2022All\u00ae 11-612 Jump Start Unit with Air Compressor",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/11_612.pdf?sfvrsn=42ddea13_4"
       },
       {
-        "title": "Goodall Start•All® 11-618 Jump Start Unit",
+        "title": "Goodall Start\u2022All\u00ae 11-618 Jump Start Unit",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/11_618.pdf?sfvrsn=4eddea13_4"
       },
       {
-        "title": "Goodall Start•All® 11-620 Jump Start Unit",
+        "title": "Goodall Start\u2022All\u00ae 11-620 Jump Start Unit",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/11_620.pdf?sfvrsn=4addea13_4"
       },
       {
-        "title": "Goodall Start•All® 11-621 Jump Start Unit with AC Generator",
+        "title": "Goodall Start\u2022All\u00ae 11-621 Jump Start Unit with AC Generator",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/11_621.pdf?sfvrsn=56ddea13_6"
       },
       {
-        "title": "Goodall Start•All® 11-625M Jump Start Unit",
+        "title": "Goodall Start\u2022All\u00ae 11-625M Jump Start Unit",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/11_625m.pdf?sfvrsn=5eddea13_4"
       },
       {
-        "title": "Goodall Start•All® 11-607 Jump Start Unit with Air Compressor",
+        "title": "Goodall Start\u2022All\u00ae 11-607 Jump Start Unit with Air Compressor",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/11_607.pdf?sfvrsn=5addea13_6"
       },
       {
-        "title": "Goodall Start•All® 11-626M Jump Start Unit with AC Generator",
+        "title": "Goodall Start\u2022All\u00ae 11-626M Jump Start Unit with AC Generator",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/11_626m.pdf?sfvrsn=a6d2ea13_4"
       },
       {
-        "title": "Goodall Start•All® 11-802 Jump Start Unit",
+        "title": "Goodall Start\u2022All\u00ae 11-802 Jump Start Unit",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/11_802.pdf?sfvrsn=a2d2ea13_4"
       },
       {
-        "title": "Goodall Start•All® 11-622 Jump Start Unit with Air Compressor",
+        "title": "Goodall Start\u2022All\u00ae 11-622 Jump Start Unit with Air Compressor",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/11_622.pdf?sfvrsn=aed2ea13_6"
       },
       {
-        "title": "Goodall Start•All® 11-920 Jump Start Unit with Air Compressor",
+        "title": "Goodall Start\u2022All\u00ae 11-920 Jump Start Unit with Air Compressor",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/11_920.pdf?sfvrsn=aad2ea13_4"
       },
       {
-        "title": "Goodall Start•All® 11-627M Jump Start Unit with Air Compressor",
+        "title": "Goodall Start\u2022All\u00ae 11-627M Jump Start Unit with Air Compressor",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/11_627m.pdf?sfvrsn=b6d2ea13_4"
       },
       {
-        "title": "Goodall Start•All® 11-921 Jump Start Unit with Air Compressor",
+        "title": "Goodall Start\u2022All\u00ae 11-921 Jump Start Unit with Air Compressor",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/11_921.pdf?sfvrsn=b2d2ea13_4"
       },
       {
-        "title": "Goodall Start•All® 11-922 Jump Start Unit with Air Compressor",
+        "title": "Goodall Start\u2022All\u00ae 11-922 Jump Start Unit with Air Compressor",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/11_922.pdf?sfvrsn=bed2ea13_4"
       },
       {
-        "title": "Goodall Start•All® 11-923 Jump Start Unit with Air Compressor",
+        "title": "Goodall Start\u2022All\u00ae 11-923 Jump Start Unit with Air Compressor",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/11_923.pdf?sfvrsn=bad2ea13_6"
       },
       {
-        "title": "Goodall Start•All® 11-923AC Jump Start Unit with Air Compressor and AC Generator",
+        "title": "Goodall Start\u2022All\u00ae 11-923AC Jump Start Unit with Air Compressor and AC Generator",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/11_923ac.pdf?sfvrsn=82d2ea13_4"
       },
       {
-        "title": "Goodall Start•All® 11-611 Jump start Unit with AC Generator",
+        "title": "Goodall Start\u2022All\u00ae 11-611 Jump start Unit with AC Generator",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/11_611.pdf?sfvrsn=96d2ea13_4"
       },
       {
-        "title": "Goodall Start•All® 11-602 Jump Start Unit with Air Compressor",
+        "title": "Goodall Start\u2022All\u00ae 11-602 Jump Start Unit with Air Compressor",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/11_602.pdf?sfvrsn=9ed2ea13_8"
       },
       {
-        "title": "Goodall Start•All® 11-920AC Jump Start Unit with Air Compressor and AC Generator",
+        "title": "Goodall Start\u2022All\u00ae 11-920AC Jump Start Unit with Air Compressor and AC Generator",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/11_920ac.pdf?sfvrsn=ebd2ea13_4"
       },
       {
@@ -2614,7 +2656,7 @@
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/pto-powered-generators.pdf?sfvrsn=3bd2ea13_6"
       },
       {
-        "title": "Goodall Start•All® 11-807 Jump Start Unit",
+        "title": "Goodall Start\u2022All\u00ae 11-807 Jump Start Unit",
         "url": "https://zips.com/docs/default-source/parts-brochures/goodall/11_807.pdf?sfvrsn=3d2ea13_4"
       },
       {
@@ -9322,11 +9364,11 @@
         "url": "https://zips.com/docs/default-source/parts-brochures/gojak-dollies-(zendex-tool)/gojak-brochure.pdf?sfvrsn=255aaa13_4"
       },
       {
-        "title": "GoJak®-SUV™ 7016 Brochure",
+        "title": "GoJak\u00ae-SUV\u2122 7016 Brochure",
         "url": "https://zips.com/docs/default-source/parts-brochures/gojak-dollies-(zendex-tool)/gojak--suv-7016-brochure.pdf?sfvrsn=364b7515_0"
       },
       {
-        "title": "RakJak™-Brochure",
+        "title": "RakJak\u2122-Brochure",
         "url": "https://zips.com/docs/default-source/parts-brochures/gojak-dollies-(zendex-tool)/rakjak--brochure.pdf?sfvrsn=ce4c2615_0"
       }
     ],
@@ -9346,7 +9388,7 @@
     ],
     "Graco": [
       {
-        "title": "Husky® 1050 Air-Operated Diaphragm Pump from Graco",
+        "title": "Husky\u00ae 1050 Air-Operated Diaphragm Pump from Graco",
         "url": "https://zips.com/docs/default-source/parts-brochures/graco/zrsb-647016-husky1050-operation-manual.pdf?sfvrsn=9eddb913_6"
       }
     ],
@@ -9922,52 +9964,6 @@
       {
         "title": "Magna Tech 750 ATS Series Tow Sling",
         "url": "https://zips.com/docs/default-source/parts-brochures/magna-tech-inc/magna-tech-750-ats-series-tow-sling.pdf?sfvrsn=58ef8d12_2"
-      }
-    ],
-    "Miller": [
-      {
-        "title": "Miller Seal Kit List February 2015",
-        "url": "https://zips.com/docs/default-source/parts-brochures/miller/miller-seal-kit-list-february-2015.pdf?sfvrsn=fc74a513_0"
-      },
-      {
-        "title": "Miller Eaton True Sine Wave Inverter",
-        "url": "https://zips.com/docs/default-source/parts-brochures/miller/ture_sine_wave_inverter.pdf?sfvrsn=4c8e8813_4"
-      },
-      {
-        "title": "New Miller 5 Inch Heavy Duty Towing Forks",
-        "url": "https://zips.com/docs/default-source/parts-brochures/miller/new-miller-5-inch-heavy-duty-towing-forks.pdf?sfvrsn=5d41fa12_2"
-      },
-      {
-        "title": "124004094 Towsling Conventional",
-        "url": "https://zips.com/docs/default-source/parts-brochures/miller/124004094-towsling-conventional-combined.pdf?sfvrsn=e6ef8d12_2"
-      },
-      {
-        "title": "T300 - DM-R160-0323AR2 Pairing Instructions",
-        "url": "https://zips.com/docs/default-source/parts-brochures/miller/t300---dm-r160-0323ar2-pairing-instructions.pdf?sfvrsn=249aeb15_0"
-      },
-      {
-        "title": "Century 0802027 Drawing",
-        "url": "https://zips.com/docs/default-source/parts-brochures/miller/century-0802027-drawing.pdf?sfvrsn=ee515c14_0"
-      },
-      {
-        "title": "Miller Industries 81287 Brochure",
-        "url": "https://zips.com/docs/default-source/parts-brochures/miller/miller-industries-81287-brochure.png?sfvrsn=50286e17_2"
-      },
-      {
-        "title": "Miller Industries 15-81286 Brochure",
-        "url": "https://zips.com/docs/default-source/parts-brochures/miller/miller-industries-81286-brochure.png?sfvrsn=26296e17_2"
-      },
-      {
-        "title": "Miller 124004140 Wiring Diagram",
-        "url": "https://zips.com/docs/default-source/parts-brochures/miller/miller-124004140-wiring-diagram.pdf?sfvrsn=29ba7d17_0"
-      },
-      {
-        "title": "Miller 124004140 Wiring Diagram",
-        "url": "https://zips.com/docs/default-source/parts-brochures/miller/miller-124004140-wiring-diagram38011b5659ba668cbcc4ff0000ad64cd.pdf?sfvrsn=fba7d17_0"
-      },
-      {
-        "title": "Miller 124004140 Wiring Diagram Details",
-        "url": "https://zips.com/docs/default-source/parts-brochures/miller/miller-124004140-wiring-diagram-details.pdf?sfvrsn=6eb47d17_0"
       }
     ],
     "Ml Kishigo": [
@@ -11044,7 +11040,7 @@
         "url": "https://zips.com/docs/default-source/parts-brochures/richlu/richlu-5-in-1-jacket-edit-1-may-2.mov?sfvrsn=1a753a12_4"
       },
       {
-        "title": "RichLu Manufacturing Men’s (Tall) Unlined Safety Coverall Size Fit Guide",
+        "title": "RichLu Manufacturing Men\u2019s (Tall) Unlined Safety Coverall Size Fit Guide",
         "url": "https://zips.com/docs/default-source/parts-brochures/richlu/s792-tall-size-fit-guide.pdf?sfvrsn=31d60712_4"
       },
       {
