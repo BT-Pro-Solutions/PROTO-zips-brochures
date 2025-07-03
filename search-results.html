@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Results - Brochures</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1">
     <style>
         /* Additional styles specific to search results */
         .search-results-container {
@@ -91,6 +91,7 @@
             padding: 8px 12px;
             border-radius: 6px;
             transition: all 0.2s ease;
+            font-weight: 500;
         }
 
         .back-button:hover {
@@ -109,6 +110,49 @@
             margin-bottom: 10px;
         }
 
+        /* Back button bar - similar to tabs but with back button */
+        .search-nav {
+            background: #fff;
+            border-bottom: 2px solid #e0e0e0;
+            padding: 0;
+            display: flex;
+            gap: 0;
+            position: sticky;
+            top: 100px;
+            z-index: 100;
+            border-top: 1px solid #e0e0e0;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search-nav-container {
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+        }
+
+        .search-nav .back-button {
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            margin: 0;
+        }
+
+        .search-nav .back-button:hover {
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
         @media (max-width: 768px) {
             .search-results-container {
                 padding: 15px;
@@ -121,22 +165,57 @@
             .result-title {
                 font-size: 1em;
             }
+
+            .search-nav-container {
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .search-nav-container {
+                padding: 0 10px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        Header Placeholder
+        (Header Placeholder)
     </header>
+    <div class="hero">
+        <div class="hero-container">
+            <h1>Search Results</h1>
+            <p>Results for your brochure search query.</p>
+        </div>
+    </div>
+    <div class="search-nav">
+        <div class="search-nav-container">
+            <a href="index.html" class="back-button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 12H5M12 5l-7 7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back to Brochures
+            </a>
+            <div class="search-container">
+                <form class="search-form" onsubmit="handleSearch(event)">
+                    <input 
+                        type="text" 
+                        class="search-input" 
+                        placeholder="Search brochures..."
+                        id="search-input"
+                        autocomplete="off"
+                    >
+                    <button type="submit" class="search-button">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 21L16.514 16.506M19 10.5A8.5 8.5 0 1 1 10.5 2a8.5 8.5 0 0 1 8.5 8.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
     
     <div class="search-results-container">
-        <a href="index.html" class="back-button">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19 12H5M12 5l-7 7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            Back to Brochures
-        </a>
-
         <div class="search-header">
             <h1 class="search-query">Search results for: <span id="search-query-text"></span></h1>
             <div class="search-meta">
@@ -210,6 +289,9 @@
             // Update search query display
             document.getElementById('search-query-text').textContent = `"${query}"`;
             
+            // Populate search input with current query
+            document.getElementById('search-input').value = query;
+            
             // Filter results based on search query (simple simulation)
             let filteredResults = mockResults;
             
@@ -257,6 +339,18 @@
                     <div class="result-brand">${result.brand}</div>
                 </div>
             `).join('');
+        }
+
+        // Handle search form submission
+        function handleSearch(event) {
+            event.preventDefault();
+            const searchInput = document.getElementById('search-input');
+            const query = searchInput.value.trim();
+            
+            if (query) {
+                // Update URL with new query and refresh results
+                window.location.href = `search-results.html?q=${encodeURIComponent(query)}`;
+            }
         }
 
         // Initialize search results when page loads
