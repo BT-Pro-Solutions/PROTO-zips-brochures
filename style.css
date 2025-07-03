@@ -26,20 +26,22 @@ header {
     justify-content: flex-start;
 }
 
-.tab-hero {
-    background: linear-gradient(135deg, #555, #000, rgb(91, 21, 21));
+.hero {
+    background: linear-gradient(135deg, #272727, #000, rgb(91, 21, 21));
     color: #ccc;
-    padding: 60px 0;
+    background-size: contain;
 
     h1 {
         color: #fff;
     }
 }
 
-.tab-hero-container {
+.hero-container {
+    background:  url(brochures-header-img.png) right no-repeat;
+    background-size: contain;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 60px 30px;
 }
 
 /* Container */
@@ -383,7 +385,7 @@ div.alphabet-letter.active {
         padding: 0 20px;
     }
     
-    .tab-hero-container {
+    .hero-container {
         padding: 0 20px;
     }
     
@@ -403,7 +405,7 @@ div.alphabet-letter.active {
         flex-wrap: wrap;
     }
     
-    .tab-hero-container {
+    .hero-container {
         padding: 0 15px;
         font-size: .8rem;
         h1 {
@@ -473,7 +475,7 @@ div.alphabet-letter.active {
         padding: 0 5px;
     }
     
-    .tab-hero-container {
+    .hero-container {
         padding: 0 10px;
     }
     
