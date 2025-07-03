@@ -196,19 +196,16 @@ header {
     margin-bottom: 10px;
 }
 
-/* Main content area with alphabet nav */
+/* Main content area */
 .content-wrapper {
-    display: flex;
     min-height: calc(100vh - 120px);
     padding-top: 30px;
     max-width: 1200px;
     margin: 0 auto;
-    position: relative;
 }
 
 /* Brochures container - single column */
 .brochures-container {
-    flex: 1;
     padding: 20px;
 }
 
@@ -233,16 +230,40 @@ header {
     position: sticky;
     top: 159px; /* Height of tab bar */
     z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+.brochures-group h2 .brand-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.brochures-group h2::after {
+    content: '▲';
+    font-size: 0.8em;
+    color: #666;
+    transition: transform 0.3s ease;
+}
+
+.brochures-group.collapsed h2::after {
+    content: '▼';
+}
+
+.brochures-group h2:hover {
+    background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
+}
+
+.brochures-group h2:hover::after {
+    color: #dc2626;
 }
 
 .brochure-count {
     font-size: 0.75em;
     color: #666;
     font-weight: normal;
-    background: #fff;
-    padding: 4px 10px;
-    border-radius: 12px;
-    border: 1px solid #ccc;
+    pointer-events: none;
 }
 
 /* Brochures list */
@@ -251,6 +272,12 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 8px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.brochures-group.collapsed .brochures-list {
+    display: none;
 }
 
 .brochure-link {
@@ -290,91 +317,6 @@ header {
     background-color: #e8e8e8;
 }
 
-/* Alphabet Navigation */
-.alphabet-nav {
-    box-sizing: border-box;
-    position: sticky;
-    top: 200px;
-    margin-left: auto;
-    margin-right: 20px;
-    display: flex;
-    flex-direction: column;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 25px;
-    padding: 15px 8px;
-    border: 1px solid #e0e0e0;
-    z-index: 100;
-    max-height: calc(100vh - 220px);
-    overflow-y: auto;
-    align-self: flex-start;
-}
-
-.alphabet-nav::-webkit-scrollbar {
-    width: 2px;
-    display: none;
-}
-
-.alphabet-nav::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.alphabet-nav::-webkit-scrollbar-thumb {
-    background: transparent;
-    border-radius: 2px;
-}
-
-.alphabet-letter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    font-size: 12px;
-    font-weight: 600;
-    color: #666;
-    text-decoration: none;
-    border-radius: 50%;
-    transition: all 0.2s ease;
-    cursor: pointer;
-    user-select: none;
-    line-height: 1;
-    min-width: 28px;
-    flex-shrink: 0;
-}
-
-.alphabet-letter:hover {
-    background-color: #f0f0f0;
-    color: #1a1a1a;
-    transform: scale(1.1);
-}
-
-div.alphabet-letter.active {
-    background-color: #dc2626;
-    color: white;
-}
-
-.alphabet-letter.available {
-    color: #1a1a1a;
-    font-weight: 700;
-}
-
-.alphabet-letter.unavailable {
-    color: #ccc;
-    cursor: default;
-}
-
-@media (max-height: 800px) {
-    .alphabet-letter.unavailable {
-        display: none;
-    }
-}
-
-.alphabet-letter.unavailable:hover {
-    background-color: transparent;
-    color: #ccc;
-    transform: none;
-}
-
 /* Responsive design */
 @media (max-width: 1024px) {
     .content-wrapper {
@@ -386,12 +328,7 @@ div.alphabet-letter.active {
     }
     
     .hero-container {
-        padding: 0 20px;
-    }
-    
-    .alphabet-nav {
-        margin-right: 10px;
-        padding: 10px 6px;
+        padding: 20px;
     }
 }
 
@@ -406,7 +343,7 @@ div.alphabet-letter.active {
     }
     
     .hero-container {
-        padding: 0 15px;
+        padding: 15px;
         font-size: .8rem;
         h1 {
             font-size: 1.5rem;
@@ -450,20 +387,6 @@ div.alphabet-letter.active {
         padding: 15px 20px;
         grid-template-columns: 1fr;
     }
-    
-    .alphabet-nav {
-        margin-right: 5px;
-        top: 230px;
-        max-height: calc(100vh - 250px);
-    }
-    
-    .alphabet-letter {
-        width: 24px;
-        height: 24px;
-        font-size: 11px;
-        margin: 2px 0;
-        min-width: 24px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -476,7 +399,7 @@ div.alphabet-letter.active {
     }
     
     .hero-container {
-        padding: 0 10px;
+        padding: 10px;
     }
     
     .tab-item {
@@ -515,9 +438,5 @@ div.alphabet-letter.active {
     .brochure-link {
         font-size: 14px;
         padding: 8px 12px;
-    }
-    
-    .alphabet-nav {
-        margin-right: 2px;
     }
 }
