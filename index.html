@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brochures - Carriers, Wreckers, Trucks & Trailers</title>
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
     <header>
@@ -12,8 +12,8 @@
     </header>
     <div class="hero">
         <div class="hero-container">
-            <h1>Brochures</h1>
-            <p>Search for a the brochure you're looking for, or browse by brand below.</p>
+            <h1>Document Finder</h1>
+            <p>Search for your product and find the documentation you need.</p>
             <div class="hero-search">
                 <form class="search-form" onsubmit="handleSearch(event)">
                     <input 
@@ -23,159 +23,124 @@
                         id="search-input"
                         autocomplete="off"
                     >
-                    <button type="submit" class="search-button">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21 21L16.514 16.506M19 10.5A8.5 8.5 0 1 1 10.5 2a8.5 8.5 0 0 1 8.5 8.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
+                    <div class="search-input-container">
+                        <div class="type-selector-container">
+                            <select class="type-selector" id="type-selector">
+                                <option value="">All Types</option>
+                                <option value="equipment-brochures">Equipment Brochures</option>
+                                <option value="product-brochures">Product Brochures</option>
+                                <option value="product-instructions">Product Instructions</option>
+                                <option value="parts-manuals">Parts Manuals</option>
+                                <option value="warranties">Warranties</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="search-button">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 21L16.514 16.506M19 10.5A8.5 8.5 0 1 1 10.5 2a8.5 8.5 0 0 1 8.5 8.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
 
     <div class="content-wrapper">
-        <div class="brochures-container">
-            <div class="loading">Loading brochures...</div>
+        <div class="document-info">
+            <h2>Locate the documentation you need</h2>
+            <p>Search our comprehensive library of documentation for carriers, wreckers, trucks, and trailers. Find exactly what you need from our collection of:</p>
+            
+            <div class="document-types">
+                <div class="document-type">
+                    <div class="document-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4a2 2 0 0 1 2-2h8a1 1 0 0 1 .707.293l5 5A1 1 0 0 1 20 8v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4z" fill="currentColor" opacity="0.1"/>
+                            <path d="M4 4a2 2 0 0 1 2-2h8a1 1 0 0 1 .707.293l5 5A1 1 0 0 1 20 8v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4zm13.586 4L14 4.414V8h3.586z" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3>Equipment Brochures</h3>
+                    <p>Detailed specifications and features for carriers, wreckers, and specialty equipment</p>
+                </div>
+                
+                <div class="document-type">
+                    <div class="document-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4a2 2 0 0 1 2-2h8a1 1 0 0 1 .707.293l5 5A1 1 0 0 1 20 8v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4z" fill="currentColor" opacity="0.1"/>
+                            <path d="M4 4a2 2 0 0 1 2-2h8a1 1 0 0 1 .707.293l5 5A1 1 0 0 1 20 8v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4zm13.586 4L14 4.414V8h3.586zM8 12h8M8 16h8" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3>Product Brochures</h3>
+                    <p>Marketing materials and product overviews for accessories and components</p>
+                </div>
+                
+                <div class="document-type">
+                    <div class="document-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4a2 2 0 0 1 2-2h8a1 1 0 0 1 .707.293l5 5A1 1 0 0 1 20 8v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4z" fill="currentColor" opacity="0.1"/>
+                            <path d="M4 4a2 2 0 0 1 2-2h8a1 1 0 0 1 .707.293l5 5A1 1 0 0 1 20 8v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4zm13.586 4L14 4.414V8h3.586zM12 12l-2 2 2 2M12 16l2-2-2-2" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3>Product Instructions</h3>
+                    <p>Step-by-step installation and operation guides for equipment and accessories</p>
+                </div>
+                
+                <div class="document-type">
+                    <div class="document-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4a2 2 0 0 1 2-2h8a1 1 0 0 1 .707.293l5 5A1 1 0 0 1 20 8v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4z" fill="currentColor" opacity="0.1"/>
+                            <path d="M4 4a2 2 0 0 1 2-2h8a1 1 0 0 1 .707.293l5 5A1 1 0 0 1 20 8v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4zm13.586 4L14 4.414V8h3.586zM8 12h2M8 16h4M14 12h2" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3>Parts Manuals</h3>
+                    <p>Comprehensive parts lists, diagrams, and replacement part information</p>
+                </div>
+                
+                <div class="document-type">
+                    <div class="document-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4a2 2 0 0 1 2-2h8a1 1 0 0 1 .707.293l5 5A1 1 0 0 1 20 8v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4z" fill="currentColor" opacity="0.1"/>
+                            <path d="M4 4a2 2 0 0 1 2-2h8a1 1 0 0 1 .707.293l5 5A1 1 0 0 1 20 8v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4zm13.586 4L14 4.414V8h3.586zM9 12l2 2 4-4" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3>Warranties</h3>
+                    <p>Warranty information and coverage details for equipment and products</p>
+                </div>
+            </div>
         </div>
     </div>
 
     <script>
-        class BrochureManager {
-            constructor() {
-                this.data = null;
-                this.init();
-            }
-
-            async init() {
-                try {
-                    await this.loadData();
-                    this.renderContent();
-                } catch (error) {
-                    console.error('Failed to initialize brochure manager:', error);
-                    this.showError('Failed to load brochure data');
-                }
-            }
-
-            async loadData() {
-                try {
-                    const response = await fetch('brochures_data.json');
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    this.data = await response.json();
-                } catch (error) {
-                    console.error('Error loading brochure data:', error);
-                    throw error;
-                }
-            }
-
-            setupCollapsibleGroups() {
-                // Add event delegation for collapsible groups
-                document.addEventListener('click', (e) => {
-                    // Check if clicked element is a brochure group header
-                    if (e.target.closest('.brochures-group h3')) {
-                        const header = e.target.closest('.brochures-group h3');
-                        const group = header.closest('.brochures-group');
-                        
-                        if (group) {
-                            group.classList.toggle('collapsed');
-                        }
-                    }
-                });
-            }
-
-            renderContent() {
-                if (!this.data) return;
-
-                this.renderBrochures();
-                
-                // Set up collapsible groups after content is rendered
-                setTimeout(() => {
-                    this.setupCollapsibleGroups();
-                }, 100);
-            }
-
-            renderBrochures() {
-                const container = document.querySelector('.brochures-container');
-                const brands = this.data.brochures;
-                
-                let html = '<h2>Browse By Brand</h2>';
-                
-                // Sort brands alphabetically
-                const sortedBrands = Object.keys(brands).sort();
-                
-                sortedBrands.forEach(brandName => {
-                    const brochures = brands[brandName];
-                    const firstLetter = brandName.charAt(0).toUpperCase();
-                    html += this.createBrandSection(brandName, brochures, firstLetter);
-                });
-                
-                container.innerHTML = html;
-            }
-
-            createBrandSection(brandName, brochures, firstLetter) {
-                let html = `
-                    <div class="brochures-group collapsed" data-brand-letter="${firstLetter}">
-                        <h3>
-                            <div class="brand-info">
-                                ${this.escapeHtml(brandName)}
-                                <span class="brochure-count">(${brochures.length})</span>
-                            </div>
-                        </h3>
-                        <div class="brochures-list">
-                `;
-                
-                brochures.forEach(brochure => {
-                    html += `
-                        <a href="${this.escapeHtml(brochure.url)}" target="_blank" class="brochure-link">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4a2 2 0 0 1 2-2h8a1 1 0 0 1 .707.293l5 5A1 1 0 0 1 20 8v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4zm13.586 4L14 4.414V8h3.586zM12 4H6v16h12V10h-5a1 1 0 0 1-1-1V4zm0 7.5a1 1 0 0 1 1 1v2.586l.293-.293a1 1 0 0 1 1.414 1.414l-2 2a1 1 0 0 1-1.414 0l-2-2a1 1 0 1 1 1.414-1.414l.293.293V12.5a1 1 0 0 1 1-1z" fill="currentColor"/></svg>
-                            ${this.escapeHtml(brochure.title)}
-                        </a>
-                    `;
-                });
-                
-                html += `
-                        </div>
-                    </div>
-                `;
-                
-                return html;
-            }
-
-            escapeHtml(text) {
-                const div = document.createElement('div');
-                div.textContent = text;
-                return div.innerHTML;
-            }
-
-            showError(message) {
-                const container = document.querySelector('.brochures-container');
-                container.innerHTML = `
-                    <div class="error-message">
-                        <h3>Error</h3>
-                        <p>${message}</p>
-                        <p>Please check the console for more details.</p>
-                    </div>
-                `;
-            }
-        }
-
-        // Initialize the brochure manager when the DOM is loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            new BrochureManager();
-        });
-
         // Handle search form submission
         function handleSearch(event) {
             event.preventDefault();
             const searchInput = document.getElementById('search-input');
+            const typeSelector = document.getElementById('type-selector');
             const query = searchInput.value.trim();
+            const type = typeSelector.value;
+            
+            // Build URL with search parameters
+            let url = 'search-results.html';
+            const params = new URLSearchParams();
             
             if (query) {
-                // Redirect to search results page with query parameter
-                window.location.href = `search-results.html?q=${encodeURIComponent(query)}`;
+                params.append('q', query);
             }
+            if (type) {
+                params.append('type', type);
+            }
+            
+            if (params.toString()) {
+                url += '?' + params.toString();
+            }
+            
+            window.location.href = url;
         }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', () => {
+            // Focus on search input when page loads
+            document.getElementById('search-input').focus();
+        });
     </script>
 </body>
 </html>

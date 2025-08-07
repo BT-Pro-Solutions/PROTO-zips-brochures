@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Results - Brochures</title>
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
     <header>
@@ -12,8 +12,8 @@
     </header>
     <div class="hero">
         <div class="hero-container">
-            <h1>Brochures</h1>
-            <p>See results for your brochure search query.</p>
+            <h1>Document Finder</h1>
+            <p>Search for your product and find the documentation you need.</p>
             <div class="hero-search">
                 <form class="search-form" onsubmit="handleSearch(event)">
                     <input 
@@ -23,24 +23,25 @@
                         id="search-input"
                         autocomplete="off"
                     >
-                    <button type="submit" class="search-button">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M21 21L16.514 16.506M19 10.5A8.5 8.5 0 1 1 10.5 2a8.5 8.5 0 0 1 8.5 8.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
+                    <div class="search-input-container">
+                        <div class="type-selector-container">
+                            <select class="type-selector" id="type-selector">
+                                <option value="">All Types</option>
+                                <option value="equipment-brochures">Equipment Brochures</option>
+                                <option value="product-brochures">Product Brochures</option>
+                                <option value="product-instructions">Product Instructions</option>
+                                <option value="parts-manuals">Parts Manuals</option>
+                                <option value="warranties">Warranties</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="search-button">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 21L16.514 16.506M19 10.5A8.5 8.5 0 1 1 10.5 2a8.5 8.5 0 0 1 8.5 8.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
                 </form>
             </div>
-        </div>
-    </div>
-    <div class="search-nav">
-        <div class="search-nav-container">
-            <a href="index.html" class="back-button">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 12H5M12 5l-7 7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                Back to Brochures
-            </a>
-            
         </div>
     </div>
     
@@ -49,6 +50,7 @@
             <h1 class="search-query">Search results for: <span id="search-query-text"></span></h1>
             <div class="search-meta">
                 <span id="result-count"></span> results found
+                <span id="type-filter" style="display: none;"> • Filtered by: <strong id="type-filter-text"></strong></span>
             </div>
         </div>
 
@@ -58,9 +60,10 @@
     </div>
 
     <script>
-        // Get search query from URL parameters
+        // Get search parameters from URL
         const urlParams = new URLSearchParams(window.location.search);
         const query = urlParams.get('q') || '';
+        const type = urlParams.get('type') || '';
 
         // Hard-coded search results for demonstration
         const mockResults = [
@@ -68,66 +71,112 @@
                 title: "Auto Crane 5005EH Series Brochure",
                 brand: "Auto Crane",
                 reason: "Title match",
-                url: "https://zips.com/docs/auto-crane-5005eh.pdf"
+                url: "https://zips.com/docs/auto-crane-5005eh.pdf",
+                type: "equipment-brochures"
             },
             {
                 title: "Service Body Installation Guide",
                 brand: "Warner Service Bodies", 
                 reason: "Matched text within PDF",
-                url: "https://zips.com/docs/warner-installation.pdf"
+                url: "https://zips.com/docs/warner-installation.pdf",
+                type: "product-instructions"
             },
             {
-                title: "Heavy Duty Winch Specifications",
+                title: "Heavy Duty Winch Parts Manual",
                 brand: "Ramsey Winch",
                 reason: "Similar product to search term",
-                url: "https://zips.com/docs/ramsey-hd-winch.pdf"
+                url: "https://zips.com/docs/ramsey-hd-winch.pdf",
+                type: "parts-manuals"
             },
             {
                 title: "LED Light Bar Product Catalog",
                 brand: "Whelen",
                 reason: "Matched text within PDF",
-                url: "https://zips.com/docs/whelen-led-catalog.pdf"
+                url: "https://zips.com/docs/whelen-led-catalog.pdf",
+                type: "product-brochures"
             },
             {
-                title: "Towing Equipment Safety Manual",
+                title: "Towing Equipment Installation Instructions",
                 brand: "In The Ditch",
                 reason: "Title match",
-                url: "https://zips.com/docs/itd-safety-manual.pdf"
+                url: "https://zips.com/docs/itd-safety-manual.pdf",
+                type: "product-instructions"
             },
             {
-                title: "Hydraulic System Maintenance Guide",
+                title: "Hydraulic System Parts Manual",
                 brand: "Buyers Products",
                 reason: "Matched text within PDF",
-                url: "https://zips.com/docs/buyers-hydraulic.pdf"
+                url: "https://zips.com/docs/buyers-hydraulic.pdf",
+                type: "parts-manuals"
             },
             {
-                title: "Emergency Vehicle Lighting Solutions",
+                title: "Emergency Vehicle Lighting Brochure",
                 brand: "Federal Signal",
                 reason: "Similar product to search term",
-                url: "https://zips.com/docs/federal-lighting.pdf"
+                url: "https://zips.com/docs/federal-lighting.pdf",
+                type: "product-brochures"
             },
             {
-                title: "Truck Body Specifications Sheet",
+                title: "Truck Body Equipment Brochure",
                 brand: "Century Equipment",
                 reason: "Title match",
-                url: "https://zips.com/docs/century-specs.pdf"
+                url: "https://zips.com/docs/century-specs.pdf",
+                type: "equipment-brochures"
+            },
+            {
+                title: "Jerr-Dan Carrier Equipment Brochure",
+                brand: "Jerr-Dan",
+                reason: "Brand match",
+                url: "https://zips.com/docs/jerr-dan-carrier.pdf",
+                type: "equipment-brochures"
+            },
+            {
+                title: "Vulcan Wrecker Warranty Information",
+                brand: "Vulcan",
+                reason: "Brand match",
+                url: "https://zips.com/docs/vulcan-wrecker.pdf",
+                type: "warranties"
             }
         ];
 
+        function getTypeDisplayName(typeValue) {
+            const typeMap = {
+                'equipment-brochures': 'Equipment Brochures',
+                'product-brochures': 'Product Brochures',
+                'product-instructions': 'Product Instructions',
+                'parts-manuals': 'Parts Manuals',
+                'warranties': 'Warranties'
+            };
+            return typeMap[typeValue] || typeValue;
+        }
+
         function displaySearchResults() {
             // Update search query display
-            document.getElementById('search-query-text').textContent = `"${query}"`;
+            const queryText = query || 'all brochures';
+            document.getElementById('search-query-text').textContent = `"${queryText}"`;
             
-            // Populate search input with current query
+            // Populate search input and type selector with current values
             document.getElementById('search-input').value = query;
+            document.getElementById('type-selector').value = type;
             
-            // Filter results based on search query (simple simulation)
+            // Show type filter if applicable
+            if (type) {
+                document.getElementById('type-filter').style.display = 'inline';
+                document.getElementById('type-filter-text').textContent = getTypeDisplayName(type);
+            }
+            
+            // Filter results based on search query and type
             let filteredResults = mockResults;
             
+            // Filter by type first
+            if (type) {
+                filteredResults = filteredResults.filter(result => result.type === type);
+            }
+            
+            // Then filter by search query
             if (query.length > 0) {
-                // Simple filtering simulation - in reality this would be much more sophisticated
                 const queryLower = query.toLowerCase();
-                filteredResults = mockResults.filter(result => 
+                filteredResults = filteredResults.filter(result => 
                     result.title.toLowerCase().includes(queryLower) ||
                     result.brand.toLowerCase().includes(queryLower) ||
                     queryLower.includes('crane') ||
@@ -136,7 +185,10 @@
                     queryLower.includes('tow') ||
                     queryLower.includes('hydraulic') ||
                     queryLower.includes('truck') ||
-                    queryLower.includes('service')
+                    queryLower.includes('service') ||
+                    queryLower.includes('jerr') ||
+                    queryLower.includes('vulcan') ||
+                    queryLower.includes('carrier')
                 );
             }
 
@@ -150,7 +202,7 @@
                 resultsContainer.innerHTML = `
                     <div class="no-results">
                         <h3>No results found</h3>
-                        <p>Try adjusting your search terms or browse our brochure categories.</p>
+                        <p>Try adjusting your search terms or selecting a different type filter.</p>
                     </div>
                 `;
                 return;
@@ -158,28 +210,62 @@
 
             resultsContainer.innerHTML = filteredResults.map(result => `
                 <div class="search-result" onclick="window.open('${result.url}', '_blank')">
-                    <div class="result-reason">${result.reason}</div>
-                    <div class="result-title">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 4a2 2 0 0 1 2-2h8a1 1 0 0 1 .707.293l5 5A1 1 0 0 1 20 8v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4zm13.586 4L14 4.414V8h3.586zM12 4H6v16h12V10h-5a1 1 0 0 1-1-1V4zm0 7.5a1 1 0 0 1 1 1v2.586l.293-.293a1 1 0 0 1 1.414 1.414l-2 2a1 1 0 0 1-1.414 0l-2-2a1 1 0 1 1 1.414-1.414l.293.293V12.5a1 1 0 0 1 1-1z" fill="currentColor"/>
-                        </svg>
-                        ${result.title}
+                    <div class="result-header">
+                        <div class="result-title">
+                            ${result.title}
+                            <span class="file-extension">PDF</span>
+                        </div>
+                        <button class="download-button" onclick="event.stopPropagation(); window.open('${result.url}', '_blank')">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                     </div>
-                    <div class="result-brand">${result.brand}</div>
+                    <div class="result-meta">
+                        <div class="result-brand"><span class="meta-label">Brand:</span> ${result.brand}</div>
+                        <div class="result-type"><span class="meta-label">Type:</span> ${getTypeDisplayName(result.type)}</div>
+                    </div>
                 </div>
             `).join('');
+            
+            // Add load more button
+            resultsContainer.innerHTML += `
+                <div class="load-more-container">
+                    <button class="load-more-button" onclick="loadMoreResults()">Load More</button>
+                </div>
+            `;
         }
 
         // Handle search form submission
         function handleSearch(event) {
             event.preventDefault();
             const searchInput = document.getElementById('search-input');
+            const typeSelector = document.getElementById('type-selector');
             const query = searchInput.value.trim();
+            const type = typeSelector.value;
+            
+            // Build URL with search parameters
+            let url = 'search-results.html';
+            const params = new URLSearchParams();
             
             if (query) {
-                // Update URL with new query and refresh results
-                window.location.href = `search-results.html?q=${encodeURIComponent(query)}`;
+                params.append('q', query);
             }
+            if (type) {
+                params.append('type', type);
+            }
+            
+            if (params.toString()) {
+                url += '?' + params.toString();
+            }
+            
+            window.location.href = url;
+        }
+
+        // Placeholder function for load more functionality
+        function loadMoreResults() {
+            // This functionality will be implemented later
+            console.log('Load more results clicked');
         }
 
         // Initialize search results when page loads
